@@ -1,0 +1,27 @@
+//GUI
+itemGroup.bigReactors.creativeTab=Big Reactors
+
+//ORES
+tile.bigreactors.ores.yellorite.name=Yellorite Ore
+
+//REACTOR
+tile.bigreactors.reactor.casing.name=Reactor Casing
+tile.bigreactors.reactor.glass.name=Reactor Glass
+tile.bigreactors.reactor.controller.name=Reactor Controller
+
+//TURBINE
+tile.bigreactors.turbine.casing.name=Turbine Casing
+tile.bigreactors.turbine.glass.name=Turbine Glass
+tile.bigreactors.turbine.controller.name=Turbine Controller
+
+//INGOTS
+item.bigreactors.ingot.yellorium.name=Yellorium Ingot
+item.bigreactors.ingot.cyanite.name=Cyanite Ingot
+item.bigreactors.ingot.blutonium.name=Blutonium Ingot
+item.bigreactors.ingot.graphite.name=Graphite Ingot
+
+//DUSTS
+item.bigreactors.dust.yellorium.name=Yellorium Dust
+item.bigreactors.dust.cyanite.name=Cyanite Dust
+item.bigreactors.dust.blutonium.name=Blutonium Dust
+item.bigreactors.dust.graphite.name=Graphite Dust
