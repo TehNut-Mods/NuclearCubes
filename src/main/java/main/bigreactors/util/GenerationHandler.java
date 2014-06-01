@@ -32,10 +32,10 @@ public class GenerationHandler implements IWorldGenerator {
 		for (int k = 0; k < 10; k++) {
 			int firstBlockXCoord = chunkX + rand.nextInt(16);
 			int firstBlockZCoord = chunkZ + rand.nextInt(16);
-			int yelloriteY = rand.nextInt(16);
+			int yelloriteY = rand.nextInt(256);
 
 			if (ConfigHandler.enableWorldGen) {
-				(new WorldGenMinable(BlockRegistry.blockOres, 0, 2, Blocks.stone)).generate(world, rand, firstBlockXCoord, yelloriteY, firstBlockZCoord);
+				(new WorldGenMinable(BlockRegistry.blockOres, 3, 0, Blocks.grass)).generate(world, rand, firstBlockXCoord, yelloriteY, firstBlockZCoord);
 			}
 		}
 	}

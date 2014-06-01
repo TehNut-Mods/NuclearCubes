@@ -14,6 +14,9 @@ tile.bigreactors.turbine.casing.name=Turbine Casing
 tile.bigreactors.turbine.glass.name=Turbine Glass
 tile.bigreactors.turbine.controller.name=Turbine Controller
 
+//MACHINES
+tile.bigreactors.cyanite.reprocessor.name=Cyanite Reprocessor
+
 //STORAGE
 tile.blockIngotStorage.yellorium.name=Block of Yellorium
 tile.blockIngotStorage.cyanite.name=Block of Cyanite

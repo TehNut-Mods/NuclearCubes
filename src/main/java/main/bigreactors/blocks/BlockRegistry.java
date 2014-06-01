@@ -24,6 +24,9 @@ public class BlockRegistry {
 	public static Block glassReactor;
 	public static Block controllerReactor;
 
+	//machines
+	public static Block cyaniteReprocessor;
+
 	//blocks
 	public static Block ingotStorage;
 
@@ -50,6 +53,9 @@ public class BlockRegistry {
 		controllerReactor = new BlockReactorController();
 		GameRegistry.registerBlock(controllerReactor, "BlockReactorController");
 
+		//machines
+		cyaniteReprocessor = new BlockCyaniteReprocessor();
+		GameRegistry.registerBlock(cyaniteReprocessor, "BlockCyaniteReprocessor");
 
 		//blocks
 		ingotStorage = new BlockIngotStorage().setBlockName("blockIngotStorage");

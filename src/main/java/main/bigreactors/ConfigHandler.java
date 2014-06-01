@@ -8,6 +8,7 @@ public class ConfigHandler {
 	public static String worldgen = "World Generation";
 	public static String recipes = "Recipes";
 	public static String general = "General";
+	public static String humor = "Humor";
 
 	//Options
 	public static boolean enableWorldGen = true;
@@ -37,6 +38,9 @@ public class ConfigHandler {
 
 	public static int maximumTurbineSize = 16;
 	public static int maximumTurbineHeight = 32;
+
+	public static boolean steamySteam;
+	public static boolean aprilFools;
 
 	public static void init(Configuration config) {
 		config.load();
@@ -69,9 +73,12 @@ public class ConfigHandler {
 		maximumTurbineSize = config.get(general,  "maxTurbineSize", 16, "The maximum valid size of a turbine in the X/Z plane, in blocks. Lower this for smaller turbines, which means lower max output. Turbines will be limited to twice this value in height.").getInt();
 		maximumTurbineHeight = maximumTurbineSize * 2;
 
+		steamySteam = config.get(humor, "steamySteam", false, "Steamify your steam").getBoolean(false);
+		aprilFools = config.get(humor, "trolololol", true, "trololololololololollolololololololloollololololololololol").getBoolean(true);
+
+
 		if (config.hasChanged()) {
 			config.save();
 		}
 	}
-
 }

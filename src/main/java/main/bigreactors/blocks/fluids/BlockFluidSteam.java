@@ -35,6 +35,7 @@ public class BlockFluidSteam extends BlockFluidClassic {
 	public void registerBlockIcons(IIconRegister register) {
 		stillIcon = register.registerIcon(ModInformation.ID + ":fluids/steamStill");
 		flowingIcon = register.registerIcon(ModInformation.ID + ":fluids/steamFlowing");
+
 		BlockRegistry.steam.setIcons(stillIcon, flowingIcon);
 		this.blockIcon = stillIcon;
 	}
