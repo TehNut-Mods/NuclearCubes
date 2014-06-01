@@ -4,6 +4,7 @@ import main.bigreactors.blocks.BlockRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class OreDictHandler {
@@ -51,8 +52,15 @@ public class OreDictHandler {
 		OreDictionary.registerOre(oreYellorite, new ItemStack(BlockRegistry.blockOres, 1, 0));
 	}
 
+	private static void registerFluidDict() {
+		FluidRegistry.registerFluid(BlockRegistry.yellorium);
+		FluidRegistry.registerFluid(BlockRegistry.cyanite);
+		FluidRegistry.registerFluid(BlockRegistry.steam);
+	}
+
 	public static void registerFullOreDict() {
 		registerOreDict();
 		registerVanillaOres();
+//		registerFluidDict();
 	}
 }

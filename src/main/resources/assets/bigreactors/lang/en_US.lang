@@ -1,5 +1,5 @@
 //GUI
-itemGroup.bigReactors.creativeTab=Big Reactors
+itemGroup.bigreactors.creativeTab=Big Reactors
 
 //ORES
 tile.bigreactors.ores.yellorite.name=Yellorite Ore
@@ -14,6 +14,19 @@ tile.bigreactors.turbine.casing.name=Turbine Casing
 tile.bigreactors.turbine.glass.name=Turbine Glass
 tile.bigreactors.turbine.controller.name=Turbine Controller
 
+//STORAGE
+tile.blockIngotStorage.yellorium.name=Block of Yellorium
+tile.blockIngotStorage.cyanite.name=Block of Cyanite
+tile.blockIngotStorage.blutonium.name=Block of Blutonium
+tile.blockIngotStorage.graphite.name=Block of Graphite
+
+//FLUIDS
+tile.bigreactors.fluids.yellorium.name=Liquid Yellorium
+tile.bigreactors.fluids.cyanite.name=Liquid Cyanite
+tile.bigreactors.fluids.blutonium.name=Liquid Blutonium
+tile.bigreactors.fluids.steam.name=Steam
+
+
 //INGOTS
 item.bigreactors.ingot.yellorium.name=Yellorium Ingot
 item.bigreactors.ingot.cyanite.name=Cyanite Ingot
@@ -25,3 +38,8 @@ item.bigreactors.dust.yellorium.name=Yellorium Dust
 item.bigreactors.dust.cyanite.name=Cyanite Dust
 item.bigreactors.dust.blutonium.name=Blutonium Dust
 item.bigreactors.dust.graphite.name=Graphite Dust
+
+//BUCKETS
+item.bigreactors.bucket.yellorium.name=Yellorium Bucket
+item.bigreactors.bucket.cyanite.name=Cyanite Bucket
+item.bigreactors.bucket.blutonium.name=Blutonium Bucket

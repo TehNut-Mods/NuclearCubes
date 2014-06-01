@@ -11,7 +11,6 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import main.bigreactors.blocks.BlockRecipeRegistry;
 import main.bigreactors.blocks.BlockRegistry;
-import main.bigreactors.fluids.BRFluidRegistry;
 import main.bigreactors.gui.CreativeTabBigReactors;
 import main.bigreactors.gui.GuiHandler;
 import main.bigreactors.items.ItemRecipeRegistry;
@@ -26,7 +25,7 @@ import net.minecraftforge.common.config.Configuration;
 @Mod(modid = ModInformation.ID, name = ModInformation.NAME, version = ModInformation.VERSION)
 public class BigReactors {
 
-	public static CreativeTabs tabBigReactors = new CreativeTabBigReactors("bigReactors.creativeTab");
+	public static CreativeTabs tabBigReactors = new CreativeTabBigReactors(ModInformation.ID + ".creativeTab");
 
 	@Instance
 	public static BigReactors instance;
@@ -41,9 +40,8 @@ public class BigReactors {
 		ConfigHandler.init(config);
 
 		BlockRegistry.registerBlocks();
-		ItemRegistry.registerItems();
+		ItemRegistry.registerFullItems();
 		TERegistry.registerTileEntities();
-		BRFluidRegistry.registerFluids();
 
 		ItemRecipeRegistry.registerFullRecipes();
 		BlockRecipeRegistry.registerFullRecipes();
