@@ -18,9 +18,10 @@ import net.minecraft.world.World;
 
 public class BlockReactorController extends BlockContainer {
 
-	private IIcon casingTex;
+	private IIcon controllerOff;
 	private IIcon controllerOn;
 	private IIcon controllerIdle;
+	private IIcon casingTex;
 
 	public BlockReactorController() {
 		super(Material.iron);
@@ -37,15 +38,14 @@ public class BlockReactorController extends BlockContainer {
 		if (side == 1 || side == 0) {
 			return this.casingTex;
 		} else {
-			return this.blockIcon;
+			return this.controllerOff;
 		}
 	}
-
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister icon) {
-		this.blockIcon = icon.registerIcon(ModInformation.ID + ":machines/reactor/reactorController_off");
+		this.controllerOff = icon.registerIcon(ModInformation.ID + ":machines/reactor/reactorController_off");
 		this.controllerOn = icon.registerIcon(ModInformation.ID + ":machines/reactor/reactorController_on");
 		this.controllerIdle = icon.registerIcon(ModInformation.ID + ":machines/reactor/reactorController_idle");
 		this.casingTex = icon.registerIcon(ModInformation.ID + ":machines/reactor/reactorCasing_default");
