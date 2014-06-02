@@ -2,6 +2,7 @@ package main.bigreactors.gui;
 
 import cpw.mods.fml.common.network.IGuiHandler;
 import main.bigreactors.containers.ContainerReactorController;
+import main.bigreactors.gui.reactor.BlockGuiReactorController;
 import main.bigreactors.tileentities.reactor.TileEntityReactorController;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;

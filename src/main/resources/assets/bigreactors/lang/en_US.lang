@@ -8,6 +8,9 @@ tile.bigreactors.ores.yellorite.name=Yellorite Ore
 tile.bigreactors.reactor.casing.name=Reactor Casing
 tile.bigreactors.reactor.glass.name=Reactor Glass
 tile.bigreactors.reactor.controller.name=Reactor Controller
+tile.bigreactors.reactor.fuelrod.yellorium.name=Yellorium Fuel Rod
+tile.bigreactors.reactor.fuelrod.blutonium.name=Blutonium Fuel Rod
+tile.bigreactors.reactor.controlrod.name=Reactor Control Rod
 
 //TURBINE
 tile.bigreactors.turbine.casing.name=Turbine Casing

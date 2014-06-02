@@ -1,4 +1,4 @@
-package main.bigreactors.gui;
+package main.bigreactors.gui.reactor;
 
 import main.bigreactors.ModInformation;
 import main.bigreactors.containers.ContainerReactorController;

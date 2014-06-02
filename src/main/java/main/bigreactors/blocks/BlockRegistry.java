@@ -6,30 +6,22 @@ import main.bigreactors.blocks.fluids.BlockFluidBlutonium;
 import main.bigreactors.blocks.fluids.BlockFluidCyanite;
 import main.bigreactors.blocks.fluids.BlockFluidSteam;
 import main.bigreactors.blocks.fluids.BlockFluidYellorium;
-import main.bigreactors.blocks.reactor.BlockReactorCasing;
-import main.bigreactors.blocks.reactor.BlockReactorController;
-import main.bigreactors.blocks.reactor.BlockReactorGlass;
+import main.bigreactors.blocks.reactor.*;
 import main.bigreactors.items.blocks.ItemBlockIngotStorage;
 import main.bigreactors.items.blocks.ItemBlockOres;
+import main.bigreactors.items.blocks.ItemBlockReactorFuelRods;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.MapColor;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialLiquid;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
 public class BlockRegistry {
 
-	//fluid materials
-	public static final Material yelloriumMaterial = (new MaterialLiquid(MapColor.waterColor));
-	public static final Material cyaniteMaterial = (new MaterialLiquid(MapColor.waterColor));
-	public static final Material blutoniumMaterial = (new MaterialLiquid(MapColor.waterColor));
-	public static final Material steamMaterial = (new MaterialLiquid(MapColor.waterColor));
-
 	//reactor
 	public static Block casingReactor;
 	public static Block glassReactor;
 	public static Block controllerReactor;
+	public static Block fuelRodReactor;
+	public static Block controlRodReactor;
 
 	//machines
 	public static Block cyaniteReprocessor;
@@ -59,6 +51,11 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(glassReactor, "BlockReactorGlass");
 		controllerReactor = new BlockReactorController();
 		GameRegistry.registerBlock(controllerReactor, "BlockReactorController");
+		fuelRodReactor = new BlockReactorFuelRods();
+		GameRegistry.registerBlock(fuelRodReactor, ItemBlockReactorFuelRods.class, fuelRodReactor.getUnlocalizedName());
+		controlRodReactor = new BlockReactorControlRod();
+		GameRegistry.registerBlock(controlRodReactor, "BlockReactorControlRod");
+
 
 		//machines
 		cyaniteReprocessor = new BlockCyaniteReprocessor();

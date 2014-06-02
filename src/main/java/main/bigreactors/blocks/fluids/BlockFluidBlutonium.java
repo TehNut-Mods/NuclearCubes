@@ -35,7 +35,7 @@ public class BlockFluidBlutonium extends BlockFluidClassic {
 	public void registerBlockIcons(IIconRegister register) {
 		stillIcon = register.registerIcon(ModInformation.ID + ":fluids/blutoniumStill");
 		flowingIcon = register.registerIcon(ModInformation.ID + ":fluids/blutoniumFlowing");
-		BlockRegistry.cyanite.setIcons(stillIcon, flowingIcon);
+		BlockRegistry.blutonium.setIcons(stillIcon, flowingIcon);
 		this.blockIcon = stillIcon;
 	}
 
