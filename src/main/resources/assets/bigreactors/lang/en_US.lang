@@ -25,10 +25,13 @@ tile.blockIngotStorage.graphite.name=Block of Graphite
 
 //FLUIDS
 tile.bigreactors.fluids.yellorium.name=Liquid Yellorium
+fluid.tile.bigreactors.fluids.yellorium=Liquid Yellorium
 tile.bigreactors.fluids.cyanite.name=Liquid Cyanite
+fluid.tile.bigreactors.fluids.cyanite=Liquid Cyanite
 tile.bigreactors.fluids.blutonium.name=Liquid Blutonium
+fluid.tile.bigreactors.fluids.blutonium=Liquid Blutonium
 tile.bigreactors.fluids.steam.name=Steam
-
+fluid.tile.bigreactors.fluids.steam=Steam
 
 //INGOTS
 item.bigreactors.ingot.yellorium.name=Yellorium Ingot

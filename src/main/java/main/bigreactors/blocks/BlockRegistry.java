@@ -12,12 +12,19 @@ import main.bigreactors.blocks.reactor.BlockReactorGlass;
 import main.bigreactors.items.blocks.ItemBlockIngotStorage;
 import main.bigreactors.items.blocks.ItemBlockOres;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MapColor;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialLiquid;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
 public class BlockRegistry {
 
 	//fluid materials
+	public static final Material yelloriumMaterial = (new MaterialLiquid(MapColor.waterColor));
+	public static final Material cyaniteMaterial = (new MaterialLiquid(MapColor.waterColor));
+	public static final Material blutoniumMaterial = (new MaterialLiquid(MapColor.waterColor));
+	public static final Material steamMaterial = (new MaterialLiquid(MapColor.waterColor));
 
 	//reactor
 	public static Block casingReactor;

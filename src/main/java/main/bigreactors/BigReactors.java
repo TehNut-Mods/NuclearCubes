@@ -17,9 +17,11 @@ import main.bigreactors.items.ItemRecipeRegistry;
 import main.bigreactors.items.ItemRegistry;
 import main.bigreactors.proxies.CommonProxy;
 import main.bigreactors.tileentities.TERegistry;
+import main.bigreactors.util.BucketHandler;
 import main.bigreactors.util.GenerationHandler;
 import main.bigreactors.util.OreDictHandler;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 
 @Mod(modid = ModInformation.ID, name = ModInformation.NAME, version = ModInformation.VERSION)
@@ -49,6 +51,7 @@ public class BigReactors {
 		OreDictHandler.registerFullOreDict();
 		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
 		NetworkRegistry.INSTANCE.registerGuiHandler(BigReactors.instance, new GuiHandler());
+		MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
 
 		proxy.initRenderers();
 		proxy.initSounds();

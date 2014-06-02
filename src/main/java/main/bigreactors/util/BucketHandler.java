@@ -21,20 +21,18 @@ public class BucketHandler {
 	}
 
 	@SubscribeEvent
-	public void onBucketFill(FillBucketEvent event)
-	{
+	public void onBucketFill(FillBucketEvent event) {
 
 		ItemStack result = fillCustomBucket(event.world, event.target);
 
-		if (result == null)
+		if (result == null) {
 			return;
-
+		}
 		event.result = result;
 		event.setResult(Event.Result.ALLOW);
 	}
 
-	private ItemStack fillCustomBucket(World world, MovingObjectPosition pos)
-	{
+	private ItemStack fillCustomBucket(World world, MovingObjectPosition pos) {
 
 		Block block = world.getBlock(pos.blockX, pos.blockY, pos.blockZ);
 
@@ -42,9 +40,9 @@ public class BucketHandler {
 		if (bucket != null && world.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ) == 0) {
 			world.setBlockToAir(pos.blockX, pos.blockY, pos.blockZ);
 			return new ItemStack(bucket);
-		} else
+		} else {
 			return null;
-
+		}
 	}
 
 }

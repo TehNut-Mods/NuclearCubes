@@ -23,11 +23,7 @@ public class ItemRecipeRegistry {
 
 	private static void registerFurnaceRecipes() {
 		//Ore to Ingot
-//		if(!ConfigHandler.registerYelloriteSmeltToUranium || (OreDictionary.getOres(OreDictHandler.ingotUranium).size() < 0)) {
-			GameRegistry.addSmelting(new ItemStack(BlockRegistry.blockOres, 1, 0), new ItemStack(ItemRegistry.ingots, 1, 0), 0.7F);
-//		}else if(ConfigHandler.registerYelloriteSmeltToUranium && (OreDictionary.getOres(OreDictHandler.ingotUranium).size() >= 0)) {
-//			GameRegistry.addSmelting(new ItemStack(BlockRegistry.blockOres, 1, 0), new ItemStack(OreDictHandler.ingotUranium), 0.7F);
-//		}
+		GameRegistry.addSmelting(new ItemStack(BlockRegistry.blockOres, 1, 0), new ItemStack(ItemRegistry.ingots, 1, 0), 0.7F);
 
 		//Dust to Ingot
 		GameRegistry.addSmelting(new ItemStack(ItemRegistry.dusts, 1, 0), new ItemStack(ItemRegistry.ingots, 1, 0), 0.7F);
