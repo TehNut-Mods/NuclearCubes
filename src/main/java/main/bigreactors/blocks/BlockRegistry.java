@@ -22,6 +22,11 @@ public class BlockRegistry {
 	public static Block controllerReactor;
 	public static Block fuelRodReactor;
 	public static Block controlRodReactor;
+	public static Block accessPortReactor;
+	public static Block powerTapReactor;
+	public static Block rednetPortReactor;
+	public static Block computerPortReactor;
+	public static Block redstonePortReactor;
 
 	//machines
 	public static Block cyaniteReprocessor;
@@ -55,7 +60,16 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(fuelRodReactor, ItemBlockReactorFuelRods.class, fuelRodReactor.getUnlocalizedName());
 		controlRodReactor = new BlockReactorControlRod();
 		GameRegistry.registerBlock(controlRodReactor, "BlockReactorControlRod");
-
+		accessPortReactor = new BlockReactorAccessPort();
+		GameRegistry.registerBlock(accessPortReactor, "BlockReactorAccessPort");
+		powerTapReactor = new BlockReactorPowerTap();
+		GameRegistry.registerBlock(powerTapReactor, "BlockReactorPowerTap");
+		rednetPortReactor = new BlockReactorRednetPort();
+		GameRegistry.registerBlock(rednetPortReactor, "BlockReactorRednetPort");
+		computerPortReactor = new BlockReactorComputerPort();
+		GameRegistry.registerBlock(computerPortReactor, "BlockReactorComputerPort");
+		redstonePortReactor = new BlockReactorRedstonePort();
+		GameRegistry.registerBlock(redstonePortReactor, "BlockReactorRedstonePort");
 
 		//machines
 		cyaniteReprocessor = new BlockCyaniteReprocessor();

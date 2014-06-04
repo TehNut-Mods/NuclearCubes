@@ -10,7 +10,9 @@ tile.bigreactors.reactor.glass.name=Reactor Glass
 tile.bigreactors.reactor.controller.name=Reactor Controller
 tile.bigreactors.reactor.fuelrod.yellorium.name=Yellorium Fuel Rod
 tile.bigreactors.reactor.fuelrod.blutonium.name=Blutonium Fuel Rod
+item.bigreactors.reactor.fuelrod.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
 tile.bigreactors.reactor.controlrod.name=Reactor Control Rod
+tile.bigreactors.reactor.accessport.name=Reactor Access Port
 
 //TURBINE
 tile.bigreactors.turbine.casing.name=Turbine Casing
@@ -25,6 +27,7 @@ tile.blockIngotStorage.yellorium.name=Block of Yellorium
 tile.blockIngotStorage.cyanite.name=Block of Cyanite
 tile.blockIngotStorage.blutonium.name=Block of Blutonium
 tile.blockIngotStorage.graphite.name=Block of Graphite
+item.blockIngotStorage.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
 
 //FLUIDS
 tile.bigreactors.fluids.yellorium.name=Liquid Yellorium
@@ -41,14 +44,17 @@ item.bigreactors.ingot.yellorium.name=Yellorium Ingot
 item.bigreactors.ingot.cyanite.name=Cyanite Ingot
 item.bigreactors.ingot.blutonium.name=Blutonium Ingot
 item.bigreactors.ingot.graphite.name=Graphite Ingot
+item.bigreactors.ingot.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
 
 //DUSTS
 item.bigreactors.dust.yellorium.name=Yellorium Dust
 item.bigreactors.dust.cyanite.name=Cyanite Dust
 item.bigreactors.dust.blutonium.name=Blutonium Dust
 item.bigreactors.dust.graphite.name=Graphite Dust
+item.bigreactors.dust.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
 
 //BUCKETS
 item.bigreactors.bucket.yellorium.name=Yellorium Bucket
 item.bigreactors.bucket.cyanite.name=Cyanite Bucket
 item.bigreactors.bucket.blutonium.name=Blutonium Bucket
+item.bigreactors.bucket.steam.name=Steam Bucket

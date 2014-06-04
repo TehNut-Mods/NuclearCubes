@@ -71,5 +71,4 @@ public class BlockReactorController extends BlockContainer {
 		int whichDirectionFacing = MathHelper.floor_double((double) (par5EntityLivingBase.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
 		par1World.setBlockMetadataWithNotify(x, y, z, whichDirectionFacing, 2);
 	}
-
 }

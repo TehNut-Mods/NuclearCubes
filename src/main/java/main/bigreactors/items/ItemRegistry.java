@@ -5,6 +5,7 @@ import main.bigreactors.ModInformation;
 import main.bigreactors.blocks.BlockRegistry;
 import main.bigreactors.items.tools.ItemBlutoniumBucket;
 import main.bigreactors.items.tools.ItemCyaniteBucket;
+import main.bigreactors.items.tools.ItemSteamBucket;
 import main.bigreactors.items.tools.ItemYelloriumBucket;
 import main.bigreactors.util.BucketHandler;
 import net.minecraft.init.Items;
@@ -17,10 +18,15 @@ public class ItemRegistry {
 
 	//ingots
 	public static Item ingots;
+
+	//dusts
 	public static Item dusts;
+
+	//buckets
 	public static Item bucketYellorium;
 	public static Item bucketCyanite;
 	public static Item bucketBlutonium;
+	public static Item bucketSteam;
 
 	private static void registerItems() {
 
@@ -36,6 +42,8 @@ public class ItemRegistry {
 		GameRegistry.registerItem(bucketCyanite, bucketCyanite.getUnlocalizedName());
 		bucketBlutonium = new ItemBlutoniumBucket(BlockRegistry.blutoniumBlock);
 		GameRegistry.registerItem(bucketBlutonium, bucketBlutonium.getUnlocalizedName());
+		bucketSteam = new ItemSteamBucket(BlockRegistry.steamBlock);
+		GameRegistry.registerItem(bucketSteam, bucketSteam.getUnlocalizedName());
 	}
 
 	private static void addBuckets() {
@@ -45,6 +53,8 @@ public class ItemRegistry {
 		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("cyanite", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketCyanite), new ItemStack(Items.bucket));
 		BucketHandler.INSTANCE.buckets.put(BlockRegistry.blutoniumBlock, bucketBlutonium);
 		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("blutonium", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketBlutonium), new ItemStack(Items.bucket));
+		BucketHandler.INSTANCE.buckets.put(BlockRegistry.steamBlock, bucketSteam);
+		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("steam", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketSteam), new ItemStack(Items.bucket));
 	}
 
 	public static void registerFullItems() {

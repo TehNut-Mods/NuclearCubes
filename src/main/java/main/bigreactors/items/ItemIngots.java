@@ -70,5 +70,4 @@ public class ItemIngots extends Item {
 			list.add(new ItemStack(this, 1, i));
 		}
 	}
-
 }

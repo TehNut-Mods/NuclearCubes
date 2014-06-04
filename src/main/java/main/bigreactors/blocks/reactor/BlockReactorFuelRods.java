@@ -20,9 +20,9 @@ public class BlockReactorFuelRods extends Block {
 	public IIcon rodEnd;
 
 	public BlockReactorFuelRods() {
-		super(Material.iron);
+		super(Material.glass);
 		this.setBlockName(ModInformation.ID + ".reactor.fuelrod");
-		this.setStepSound(soundTypeMetal);
+		this.setStepSound(soundTypeGlass);
 		this.setCreativeTab(BigReactors.tabBigReactors);
 		this.setHardness(7F);
 	}
@@ -75,5 +75,4 @@ public class BlockReactorFuelRods extends Block {
 	public boolean shouldSideBeRendered() {
 		return true;
 	}
-
 }
