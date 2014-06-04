@@ -30,9 +30,11 @@ public class ItemRecipeRegistry {
 		GameRegistry.addSmelting(new ItemStack(ItemRegistry.dusts, 1, 1), new ItemStack(ItemRegistry.ingots, 1, 1), 0.7F);
 		GameRegistry.addSmelting(new ItemStack(ItemRegistry.dusts, 1, 2), new ItemStack(ItemRegistry.ingots, 1, 2), 0.7F);
 
+		//Coal to Graphite
 		if(ConfigHandler.registerCoalFurnaceRecipe) {
 			GameRegistry.addSmelting(new ItemStack(Items.coal, 1, 0), new ItemStack(ItemRegistry.ingots, 1, 3), 0.7F);
 		}
+		//Charcoal to Graphite
 		if(ConfigHandler.registerCharcoalFurnaceRecipe) {
 			GameRegistry.addSmelting(new ItemStack(Items.coal, 1, 1), new ItemStack(ItemRegistry.ingots, 1, 3), 0.7F);
 		}

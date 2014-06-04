@@ -1,6 +1,7 @@
 package main.bigreactors.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import main.bigreactors.ConfigHandler;
 import main.bigreactors.ModInformation;
 import main.bigreactors.blocks.fluids.BlockFluidBlutonium;
 import main.bigreactors.blocks.fluids.BlockFluidCyanite;
@@ -101,12 +102,13 @@ public class BlockRegistry {
 		blutoniumBlock = new BlockFluidBlutonium(blutonium);
 		GameRegistry.registerBlock(blutoniumBlock, blutoniumBlock.getUnlocalizedName());
 		blutonium.setUnlocalizedName(blutoniumBlock.getUnlocalizedName());
-
-		steam = new Fluid("steam");
-		FluidRegistry.registerFluid(steam);
-		steamBlock = new BlockFluidSteam(steam);
-		GameRegistry.registerBlock(steamBlock, steamBlock.getUnlocalizedName());
-		steam.setUnlocalizedName(steamBlock.getUnlocalizedName());
+		if(ConfigHandler.registerOwnSteam) {
+			steam = new Fluid("steam");
+			FluidRegistry.registerFluid(steam);
+			steamBlock = new BlockFluidSteam(steam);
+			GameRegistry.registerBlock(steamBlock, steamBlock.getUnlocalizedName());
+			steam.setUnlocalizedName(steamBlock.getUnlocalizedName());
+		}
 	}
 
 }

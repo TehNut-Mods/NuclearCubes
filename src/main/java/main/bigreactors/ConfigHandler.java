@@ -30,6 +30,7 @@ public class ConfigHandler {
 
 	public static boolean useConnectedTextures = true;
 
+	public static boolean registerOwnSteam = true;
 	public static int maximumReactorSize; //= MultiblockReactor.DIMENSION_UNBOUNDED;
 	public static int maximumReactorHeight; //= MultiblockReactor.DIMENSION_UNBOUNDED;
 	public static int ticksPerRedstoneUpdate = 20;
@@ -64,6 +65,7 @@ public class ConfigHandler {
 
 		useConnectedTextures = config.get(general, "useConnectedTextures", true, "Enable connected textures for non-multiblock blocks.").getBoolean(true);
 
+		registerOwnSteam = config.get(general, "registerOwnSteam", true, "Register BR steam if nothing else adds Steam. Default: True").getBoolean(true);
 		maximumReactorSize = config.get(general, "maxReactorSize", 32, "The maximum valid size of a reactor in the X/Z plane, in blocks. Lower this if your server's players are building ginormous reactors.").getInt();
 		maximumReactorHeight = config.get(general, "maxReactorHeight", 48, "The maximum valid size of a reactor in the Y dimension, in blocks. Lower this if your server's players are building ginormous reactors. Bigger Y sizes have far less performance impact than X/Z sizes.").getInt();
 		ticksPerRedstoneUpdate = config.get(general, "ticksPerRedstoneUpdate", 20, "Number of ticks between updates for redstone/rednet ports.").getInt();

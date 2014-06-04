@@ -1,6 +1,7 @@
 package main.bigreactors.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import main.bigreactors.ConfigHandler;
 import main.bigreactors.ModInformation;
 import main.bigreactors.blocks.BlockRegistry;
 import main.bigreactors.items.tools.ItemBlutoniumBucket;
@@ -42,8 +43,10 @@ public class ItemRegistry {
 		GameRegistry.registerItem(bucketCyanite, bucketCyanite.getUnlocalizedName());
 		bucketBlutonium = new ItemBlutoniumBucket(BlockRegistry.blutoniumBlock);
 		GameRegistry.registerItem(bucketBlutonium, bucketBlutonium.getUnlocalizedName());
-		bucketSteam = new ItemSteamBucket(BlockRegistry.steamBlock);
-		GameRegistry.registerItem(bucketSteam, bucketSteam.getUnlocalizedName());
+		if(ConfigHandler.registerOwnSteam) {
+			bucketSteam = new ItemSteamBucket(BlockRegistry.steamBlock);
+			GameRegistry.registerItem(bucketSteam, bucketSteam.getUnlocalizedName());
+		}
 	}
 
 	private static void addBuckets() {
@@ -53,8 +56,10 @@ public class ItemRegistry {
 		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("cyanite", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketCyanite), new ItemStack(Items.bucket));
 		BucketHandler.INSTANCE.buckets.put(BlockRegistry.blutoniumBlock, bucketBlutonium);
 		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("blutonium", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketBlutonium), new ItemStack(Items.bucket));
-		BucketHandler.INSTANCE.buckets.put(BlockRegistry.steamBlock, bucketSteam);
-		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("steam", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketSteam), new ItemStack(Items.bucket));
+		if(ConfigHandler.registerOwnSteam) {
+			BucketHandler.INSTANCE.buckets.put(BlockRegistry.steamBlock, bucketSteam);
+			FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("steam", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketSteam), new ItemStack(Items.bucket));
+		}
 	}
 
 	public static void registerFullItems() {
