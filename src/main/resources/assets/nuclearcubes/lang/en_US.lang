@@ -1,0 +1,71 @@
+//GUI
+itemGroup.nuclearcubes.creativeTab=Nuclear Cubes
+
+//ORES
+tile.nuclearcubes.ores.yellorite.name=Yellorite Ore
+
+//REACTOR
+tile.nuclearcubes.reactor.casing.name=Reactor Casing
+tile.nuclearcubes.reactor.glass.name=Reactor Glass
+tile.nuclearcubes.reactor.controller.name=Reactor Controller
+tile.nuclearcubes.reactor.fuelrod.yellorium.name=Uranium Fuel Rod
+tile.nuclearcubes.reactor.fuelrod.blutonium.name=Plutonium Fuel Rod
+item.nuclearcubes.reactor.fuelrod.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
+tile.nuclearcubes.reactor.controlrod.name=Reactor Control Rod
+tile.nuclearcubes.reactor.accessport.name=Reactor Access Port
+tile.nuclearcubes.reactor.redstoneport.name=Redstone Injector
+tile.nuclearcubes.reactor.computerport.name=Computer Jack
+tile.nuclearcubes.reactor.powertap.name=Power Ejector
+tile.nuclearcubes.reactor.rednetport.name=Rednet Injector
+
+//TURBINE
+tile.nuclearcubes.turbine.casing.name=Turbine Casing
+tile.nuclearcubes.turbine.glass.name=Turbine Glass
+tile.nuclearcubes.turbine.controller.name=Turbine Controller
+
+//MACHINES
+tile.nuclearcubes.cyanite.reprocessor.name=Depleted Uranium Reprocessor
+
+//STORAGE
+tile.blockIngotStorage.yellorium.name=Block of Uranium
+tile.blockIngotStorage.cyanite.name=Block of Depleted Uranium
+tile.blockIngotStorage.blutonium.name=Block of Plutonium
+tile.blockIngotStorage.graphite.name=Block of Graphite
+item.blockIngotStorage.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
+
+//FLUIDS
+tile.nuclearcubes.fluids.yellorium.name=Liquid Uranium
+fluid.tile.nuclearcubes.fluids.yellorium=Liquid Uranium
+tile.nuclearcubes.fluids.cyanite.name=Liquid Depleted Uranium
+fluid.tile.nuclearcubes.fluids.cyanite=Liquid Depleted Uranium
+tile.nuclearcubes.fluids.blutonium.name=Liquid Plutonium
+fluid.tile.nuclearcubes.fluids.blutonium=Liquid Plutonium
+tile.nuclearcubes.fluids.steam.name=Steam
+fluid.tile.nuclearcubes.fluids.steam=Steam
+
+//INGOTS
+item.nuclearcubes.ingot.yellorium.name=Uranium Ingot
+item.nuclearcubes.ingot.cyanite.name=Depleted Uranium Ingot
+item.nuclearcubes.ingot.blutonium.name=Plutonium Ingot
+item.nuclearcubes.ingot.graphite.name=Graphite Ingot
+item.nuclearcubes.ingot.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
+
+//DUSTS
+item.nuclearcubes.dust.yellorium.name=Uranium Dust
+item.nuclearcubes.dust.cyanite.name=Depleted Uranium Dust
+item.nuclearcubes.dust.blutonium.name=Plutonium Dust
+item.nuclearcubes.dust.graphite.name=Graphite Dust
+item.nuclearcubes.dust.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
+
+//BUCKETS
+item.nuclearcubes.bucket.yellorium.name=Uranium Bucket
+item.nuclearcubes.bucket.cyanite.name=Depleted Uranium Bucket
+item.nuclearcubes.bucket.blutonium.name=Plutonium Bucket
+item.nuclearcubes.bucket.steam.name=Steam Bucket
+
+//DEBUG
+item.nuclearcubes.debug.redBook.name=Red Debug Book
+item.nuclearcubes.debug.greenBook.name=Green Debug Book
+item.nuclearcubes.debug.blueBook.name=Blue Debug Book
+item.nuclearcubes.debug.purpleBook.name=Purple Debug Book
+item.nuclearcubes.debug.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS

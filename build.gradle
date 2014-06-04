@@ -18,8 +18,8 @@ buildscript {
 apply plugin: 'forge'
 
 version = "0.0.1"
-group= "info.tehnut.bigreactors" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "bigreactors"
+group= "info.tehnut.nuclearcubes" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "nuclearcubes"
 
 minecraft {
     version = "1.7.2-10.12.1.1101"
