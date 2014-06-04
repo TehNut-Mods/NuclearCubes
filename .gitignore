@@ -8,3 +8,8 @@ asm/*
 *.ipr
 *.iws
 *.psd
+/bin
+
+*.classpath
+*.project
+/bin

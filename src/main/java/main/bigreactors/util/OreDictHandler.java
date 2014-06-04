@@ -1,5 +1,6 @@
 package main.bigreactors.util;
 
+import main.bigreactors.BigReactors;
 import main.bigreactors.ConfigHandler;
 import main.bigreactors.blocks.BlockRegistry;
 import main.bigreactors.items.ItemRegistry;
@@ -28,18 +29,16 @@ public class OreDictHandler {
 		//This is currently broken while I figure out how to work with the OreDict...
 		if(ConfigHandler.registerYelloriteSmeltToUranium && OreDictionary.getOres("ingotUranium").size() > 0) {
 			ingotYellorium = "ingotUranium";
-			System.err.println("[DEBUG] ingotUranium");
+			BigReactors.logger.debug("Registering yellorium as ingotUranium...");
 		} else {
 			ingotYellorium = "ingotYellorium";
-			System.err.println("[DEBUG] ingotYellorium");
 		}
 
 		if(ConfigHandler.useSteelForIron && OreDictionary.getOres("ingotSteel").size() > 0) {
 			ingotIronOrSteel = "ingotSteel";
-			System.err.println("[DEBUG] ingotSteel");
+			BigReactors.logger.debug("Using steel in place of iron...");
 		} else {
 			ingotIronOrSteel = "ingotIron";
-			System.err.println("[DEBUG] ingotIron");
 		}
 
 		OreDictionary.registerOre(ingotYellorium, new ItemStack(ItemRegistry.ingots, 1, 0));

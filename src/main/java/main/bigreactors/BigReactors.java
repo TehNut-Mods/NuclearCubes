@@ -1,5 +1,8 @@
 package main.bigreactors;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -35,6 +38,8 @@ public class BigReactors {
 
 	@SidedProxy(clientSide = "main.bigreactors.proxies.ClientProxy", serverSide = "main.bigreactors.proxies.CommonProxy")
 	public static CommonProxy proxy;
+	
+    public static Logger logger = LogManager.getLogger(ModInformation.NAME);
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
