@@ -9,6 +9,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
 import main.nuclearcubes.blocks.BlockRecipeRegistry;
 import main.nuclearcubes.blocks.BlockRegistry;
 import main.nuclearcubes.gui.CreativeTabNuclearCubes;
@@ -18,6 +19,7 @@ import main.nuclearcubes.items.ItemRegistry;
 import main.nuclearcubes.proxies.CommonProxy;
 import main.nuclearcubes.tileentities.TERegistry;
 import main.nuclearcubes.util.BucketHandler;
+import main.nuclearcubes.util.CapeEventHandler;
 import main.nuclearcubes.util.GenerationHandler;
 import main.nuclearcubes.util.OreDictHandler;
 import net.minecraft.creativetab.CreativeTabs;
@@ -59,7 +61,9 @@ public class NuclearCubes {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-
+		if (event.getSide() == Side.CLIENT && ConfigHandler.enableCapes) {
+			MinecraftForge.EVENT_BUS.register(new CapeEventHandler());
+		}
 	}
 
 	@EventHandler
