@@ -12,44 +12,32 @@ public class ConfigHandler {
 	public static String debug = "5 - Debug";
 
 	//Options
-	public static boolean enableWorldGen = true;
-	public static boolean enableWorldGenInNegativeDimensions = false;
-//	public static boolean enableWorldRegeneration = false;
-//	public static int userWorldGenVersion = 0;
+	public static boolean enableWorldGen;
+	public static boolean enableWorldGenInNegativeDimensions;
 
-	public static boolean registerCoalFurnaceRecipe = true;
-	public static boolean registerCharcoalFurnaceRecipe = true;
-	public static boolean registerCoalCraftingRecipe = false;
-	public static boolean registerCharcoalCraftingRecipe = false;
-	public static boolean registerYelloriteSmeltToUranium = false;
+	public static boolean registerCoalFurnaceRecipe;
+	public static boolean registerCharcoalFurnaceRecipe;
+	public static boolean registerCoalCraftingRecipe;
+	public static boolean registerCharcoalCraftingRecipe;
+	public static boolean registerYelloriteSmeltToUranium;
 
-	public static boolean useSteelForIron = false;
-	public static boolean useExpensiveGlass = false;
+	public static boolean useSteelForIron;
+	public static boolean useExpensiveGlass;
 
-//	public static boolean enableReactorPowerTapRecipe = true;
-	public static boolean enableCyaniteFromYelloriumRecipe = true;
+	public static boolean enableCyaniteFromYelloriumRecipe;
 
-	public static boolean enableCapes = true;
-	public static boolean useHighResTextures = true;
-	public static boolean useConnectedTextures = true;
+	public static boolean enableCapes;
+	public static boolean useHighResTextures;
+	public static boolean useConnectedTextures;
 
-	public static boolean enablePlayerEffects = true;
-	public static boolean registerOwnSteam = true;
-
-//	public static int maximumReactorSize; //= MultiblockReactor.DIMENSION_UNBOUNDED;
-//	public static int maximumReactorHeight; //= MultiblockReactor.DIMENSION_UNBOUNDED;
-//	public static int ticksPerRedstoneUpdate = 20;
-//	public static double powerProductionMultiplier = 1.0f;
-//	public static double fuelUsageMultiplier = 1.0f;
-
-//	public static int maximumTurbineSize = 16;
-//	public static int maximumTurbineHeight = 32;
+	public static boolean enablePlayerEffects;
+	public static boolean registerOwnSteam;
 
 	public static boolean steamySteam;
 	public static boolean aprilFools;
 
-	public static boolean showOredictTooltips = false;
-	public static boolean enableDebugTools = false;
+	public static boolean showOredictTooltips;
+	public static boolean enableDebugTools;
 
 	public static void init(Configuration config) {
 		config.load();

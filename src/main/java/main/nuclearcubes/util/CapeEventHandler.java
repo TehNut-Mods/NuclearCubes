@@ -18,8 +18,6 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-;
-
 public class CapeEventHandler {
 
 	private final String serverLocation = "https://raw.githubusercontent.com/TehNut/NuclearCubes/master/capes/capes.txt";
