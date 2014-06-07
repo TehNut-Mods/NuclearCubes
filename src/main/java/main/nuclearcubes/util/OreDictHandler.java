@@ -15,7 +15,7 @@ public class OreDictHandler {
 	public static String ingotIronOrSteel;
 	public static String ingotCyanite = "ingotCyanite";
 	public static String ingotBlutonium = "ingotBlutonium";
-	public static String ingotGraphite = "ingotGraphite";
+	public static String chunkGraphite = "chunkGraphite";
 
 	public static String dustYellorium = "dustYellorium";
 	public static String dustCyanite = "dustCyanite";
@@ -44,7 +44,7 @@ public class OreDictHandler {
 		OreDictionary.registerOre(ingotYellorium, new ItemStack(ItemRegistry.ingots, 1, 0));
 		OreDictionary.registerOre(ingotCyanite, new ItemStack(ItemRegistry.ingots, 1, 1));
 		OreDictionary.registerOre(ingotBlutonium, new ItemStack(ItemRegistry.ingots, 1, 2));
-		OreDictionary.registerOre(ingotGraphite, new ItemStack(ItemRegistry.ingots, 1, 3));
+		OreDictionary.registerOre(chunkGraphite, new ItemStack(ItemRegistry.ingots, 1, 3));
 
 		OreDictionary.registerOre(dustYellorium, new ItemStack(ItemRegistry.dusts, 1, 0));
 		OreDictionary.registerOre(dustCyanite, new ItemStack(ItemRegistry.dusts, 1, 1));

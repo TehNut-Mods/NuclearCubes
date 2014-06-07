@@ -16,11 +16,15 @@ public class ItemBlockReactorFuelRods extends ItemBlock {
 		String name = "";
 		switch (itemstack.getItemDamage()) {
 			case 0: {
-				name = "yellorium";
+				name = "base";
 				break;
 			}
 			case 1: {
-				name = "blutonium";
+				name = "uranium";
+				break;
+			}
+			case 2: {
+				name = "plutonium";
 				break;
 			}
 			default:

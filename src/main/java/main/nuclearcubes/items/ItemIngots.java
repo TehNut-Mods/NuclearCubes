@@ -40,7 +40,7 @@ public class ItemIngots extends Item {
 				break;
 			}
 			case 3: {
-				name = "ingot.graphite";
+				name = "chunk.graphite";
 				break;
 			}
 			default:
@@ -60,7 +60,7 @@ public class ItemIngots extends Item {
 		this.icon[0] = ri.registerIcon(ModInformation.ID + ":ingots/ingotYellorium");
 		this.icon[1] = ri.registerIcon(ModInformation.ID + ":ingots/ingotCyanite");
 		this.icon[2] = ri.registerIcon(ModInformation.ID + ":ingots/ingotBlutonium");
-		this.icon[3] = ri.registerIcon(ModInformation.ID + ":ingots/ingotGraphite");
+		this.icon[3] = ri.registerIcon(ModInformation.ID + ":ingots/chunkGraphite");
 	}
 
 	@SuppressWarnings({"rawtypes", "unchecked"})

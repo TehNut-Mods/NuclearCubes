@@ -8,8 +8,9 @@ tile.nuclearcubes.ores.yellorite.name=Yellorite Ore
 tile.nuclearcubes.reactor.casing.name=Reactor Casing
 tile.nuclearcubes.reactor.glass.name=Reactor Glass
 tile.nuclearcubes.reactor.controller.name=Reactor Controller
-tile.nuclearcubes.reactor.fuelrod.yellorium.name=Uranium Fuel Rod
-tile.nuclearcubes.reactor.fuelrod.blutonium.name=Plutonium Fuel Rod
+tile.nuclearcubes.reactor.fuelrod.base.name=Fuel Rod
+tile.nuclearcubes.reactor.fuelrod.uranium.name=Uranium Fuel Rod
+tile.nuclearcubes.reactor.fuelrod.plutonium.name=Plutonium Fuel Rod
 item.nuclearcubes.reactor.fuelrod.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
 tile.nuclearcubes.reactor.controlrod.name=Reactor Control Rod
 tile.nuclearcubes.reactor.accessport.name=Reactor Access Port
@@ -24,7 +25,7 @@ tile.nuclearcubes.turbine.glass.name=Turbine Glass
 tile.nuclearcubes.turbine.controller.name=Turbine Controller
 
 //MACHINES
-tile.nuclearcubes.cyanite.reprocessor.name=Depleted Uranium Reprocessor
+tile.nuclearcubes.fuel.reprocessor.name=Fuel Reprocessor
 
 //STORAGE
 tile.blockIngotStorage.yellorium.name=Block of Uranium
@@ -47,7 +48,7 @@ fluid.tile.nuclearcubes.fluids.steam=Steam
 item.nuclearcubes.ingot.yellorium.name=Uranium Ingot
 item.nuclearcubes.ingot.cyanite.name=Depleted Uranium Ingot
 item.nuclearcubes.ingot.blutonium.name=Plutonium Ingot
-item.nuclearcubes.ingot.graphite.name=Graphite Ingot
+item.nuclearcubes.chunk.graphite.name=Graphite Chunk
 item.nuclearcubes.ingot.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
 
 //DUSTS

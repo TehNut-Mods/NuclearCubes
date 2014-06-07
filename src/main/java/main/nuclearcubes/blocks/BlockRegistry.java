@@ -3,10 +3,7 @@ package main.nuclearcubes.blocks;
 import cpw.mods.fml.common.registry.GameRegistry;
 import main.nuclearcubes.ConfigHandler;
 import main.nuclearcubes.ModInformation;
-import main.nuclearcubes.blocks.fluids.BlockFluidBlutonium;
-import main.nuclearcubes.blocks.fluids.BlockFluidCyanite;
-import main.nuclearcubes.blocks.fluids.BlockFluidSteam;
-import main.nuclearcubes.blocks.fluids.BlockFluidYellorium;
+import main.nuclearcubes.blocks.fluids.*;
 import main.nuclearcubes.blocks.reactor.*;
 import main.nuclearcubes.items.blocks.ItemBlockIngotStorage;
 import main.nuclearcubes.items.blocks.ItemBlockOres;
@@ -47,6 +44,8 @@ public class BlockRegistry {
 	public static Block blutoniumBlock;
 	public static Fluid steam;
 	public static Block steamBlock;
+	public static Fluid corium;
+	public static Block coriumBlock;
 
 	public static void registerBlocks() {
 
@@ -73,8 +72,8 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(redstonePortReactor, "BlockReactorRedstonePort");
 
 		//machines
-		cyaniteReprocessor = new BlockCyaniteReprocessor();
-		GameRegistry.registerBlock(cyaniteReprocessor, "BlockCyaniteReprocessor");
+		cyaniteReprocessor = new BlockFuelReprocessor();
+		GameRegistry.registerBlock(cyaniteReprocessor, "BlockFuelReprocessor");
 
 		//blocks
 		ingotStorage = new BlockIngotStorage().setBlockName("blockIngotStorage");
@@ -102,6 +101,7 @@ public class BlockRegistry {
 		blutoniumBlock = new BlockFluidBlutonium(blutonium);
 		GameRegistry.registerBlock(blutoniumBlock, blutoniumBlock.getUnlocalizedName());
 		blutonium.setUnlocalizedName(blutoniumBlock.getUnlocalizedName());
+
 		if(ConfigHandler.registerOwnSteam) {
 			steam = new Fluid("steam");
 			FluidRegistry.registerFluid(steam);
@@ -109,6 +109,12 @@ public class BlockRegistry {
 			GameRegistry.registerBlock(steamBlock, steamBlock.getUnlocalizedName());
 			steam.setUnlocalizedName(steamBlock.getUnlocalizedName());
 		}
+
+		corium = new Fluid("corium");
+		FluidRegistry.registerFluid(corium);
+		coriumBlock = new BlockFluidCorium(corium);
+		GameRegistry.registerBlock(coriumBlock, coriumBlock.getUnlocalizedName());
+		corium.setUnlocalizedName(coriumBlock.getUnlocalizedName());
 	}
 
 }

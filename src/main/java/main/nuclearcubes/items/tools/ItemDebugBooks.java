@@ -4,13 +4,13 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import main.nuclearcubes.ModInformation;
 import main.nuclearcubes.NuclearCubes;
+import main.nuclearcubes.util.TextHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
-import net.minecraft.world.World;
 
 import java.util.List;
 
@@ -74,17 +74,30 @@ public class ItemDebugBooks extends Item {
 		}
 	}
 
+//	@Override
+//	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
+//		if(itemStack.getItemDamage() == 0 && !world.isRemote && player.isSneaking()) {
+//			return null;
+//		} else if(itemStack.getItemDamage() == 1 && !world.isRemote && player.isSneaking()) {
+//			return null;
+//		} else if(itemStack.getItemDamage() == 2 && !world.isRemote && player.isSneaking()) {
+//			return null;
+//		} else if(itemStack.getItemDamage() == 3 && !world.isRemote && player.isSneaking()) {
+//			return null;
+//		}
+//		return null;
+//	}
+
 	@Override
-	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
-		if(itemStack.getItemDamage() == 0 && !world.isRemote && player.isSneaking()) {
-			return null;
-		} else if(itemStack.getItemDamage() == 1 && !world.isRemote && player.isSneaking()) {
-			return null;
-		} else if(itemStack.getItemDamage() == 2 && !world.isRemote && player.isSneaking()) {
-			return null;
-		} else if(itemStack.getItemDamage() == 3 && !world.isRemote && player.isSneaking()) {
-			return null;
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
+		if(itemStack.getItemDamage() == 0) {
+			list.add(TextHelper.RED + "Red book");
+		} else if(itemStack.getItemDamage() == 1) {
+			list.add(TextHelper.GREEN + "Green book");
+		} else if(itemStack.getItemDamage() == 2) {
+			list.add(TextHelper.LIGHT_BLUE + "Blue book");
+		} else if(itemStack.getItemDamage() == 3) {
+			list.add(TextHelper.PURPLE + "Purple book");
 		}
-		return null;
 	}
 }

@@ -1,7 +1,7 @@
 package main.nuclearcubes.blocks.reactor;
 
-import main.nuclearcubes.NuclearCubes;
 import main.nuclearcubes.ModInformation;
+import main.nuclearcubes.NuclearCubes;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 

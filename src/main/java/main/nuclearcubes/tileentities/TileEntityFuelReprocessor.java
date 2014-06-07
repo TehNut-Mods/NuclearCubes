@@ -2,11 +2,11 @@ package main.nuclearcubes.tileentities;
 
 import net.minecraft.item.ItemStack;
 
-public class TileEntityCyaniteReprocessor extends TileEntityBase {
+public class TileEntityFuelReprocessor extends TileEntityBase {
 
 	private String field_145958_o;
 
-	public TileEntityCyaniteReprocessor() {
+	public TileEntityFuelReprocessor() {
 	}
 
 	@Override

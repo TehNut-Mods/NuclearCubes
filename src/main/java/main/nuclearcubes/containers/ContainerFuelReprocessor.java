@@ -1,15 +1,16 @@
 package main.nuclearcubes.containers;
 
-import main.nuclearcubes.tileentities.reactor.TileEntityReactorController;
+import main.nuclearcubes.tileentities.TileEntityFuelReprocessor;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class ContainerReactorController extends Container {
+public class ContainerFuelReprocessor extends Container {
 
-	public ContainerReactorController(EntityPlayer player, TileEntityReactorController entity) {
+
+	public ContainerFuelReprocessor(EntityPlayer player, TileEntityFuelReprocessor entity) {
 		createSlots(entity, player);
 		bindPlayerInventory(player.inventory);
 	}
@@ -23,7 +24,7 @@ public class ContainerReactorController extends Container {
 		return true;
 	}
 
-	private void createSlots(TileEntityReactorController tile, EntityPlayer player) {
+	private void createSlots(TileEntityFuelReprocessor tile, EntityPlayer player) {
 	}
 
 	@Override

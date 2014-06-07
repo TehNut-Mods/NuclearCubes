@@ -14,7 +14,7 @@ public class BlockReactorGlass extends Block {
 	public BlockReactorGlass() {
 		super(Material.glass);
 		this.setBlockName(ModInformation.ID + ".reactor.glass");
-		this.setBlockTextureName(ModInformation.ID + ":machines/reactor/reactorGlass_0");
+		this.setBlockTextureName(ModInformation.ID + ":machines/reactor/reactorGlass_default");
 		this.setStepSound(soundTypeGlass);
 		this.setCreativeTab(NuclearCubes.tabNuclearCubes);
 		this.setHardness(7);

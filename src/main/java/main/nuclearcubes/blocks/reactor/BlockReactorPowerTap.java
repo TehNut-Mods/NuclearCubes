@@ -18,7 +18,7 @@ public class BlockReactorPowerTap extends Block {
 	public BlockReactorPowerTap() {
 		super(Material.iron);
 		this.setBlockName(ModInformation.ID + ".reactor.powertap");
-		this.setBlockTextureName(ModInformation.ID + ":machines/reactor/reactorPowerTap_disconnected");
+		this.setBlockTextureName(ModInformation.ID + ":machines/reactor/reactorPowerTap_off");
 		this.setStepSound(soundTypeMetal);
 		this.setCreativeTab(NuclearCubes.tabNuclearCubes);
 		this.setHardness(7);
@@ -37,8 +37,8 @@ public class BlockReactorPowerTap extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister icon) {
-		this.powerTapConnected = icon.registerIcon(ModInformation.ID + ":machines/reactor/reactorPowerTap_connected");
-		this.powerTapDisconnected = icon.registerIcon(ModInformation.ID + ":machines/reactor/reactorPowerTap_disconnected");
+		this.powerTapConnected = icon.registerIcon(ModInformation.ID + ":machines/reactor/reactorPowerTap_on");
+		this.powerTapDisconnected = icon.registerIcon(ModInformation.ID + ":machines/reactor/reactorPowerTap_off");
 		this.casingTex = icon.registerIcon(ModInformation.ID + ":machines/reactor/reactorCasing_default");
 	}
 

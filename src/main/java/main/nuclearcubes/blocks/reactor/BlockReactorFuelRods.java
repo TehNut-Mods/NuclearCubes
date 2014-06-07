@@ -31,8 +31,9 @@ public class BlockReactorFuelRods extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister ir) {
 		this.rodEnd = ir.registerIcon(ModInformation.ID + ":machines/reactor/reactorFuelRod_end");
-		this.icon[0] = ir.registerIcon(ModInformation.ID + ":machines/reactor/reactorYelloriumFuelRod_side");
-		this.icon[1] = ir.registerIcon(ModInformation.ID + ":machines/reactor/reactorBlutoniumFuelRod_side");
+		this.icon[0] = ir.registerIcon(ModInformation.ID + ":machines/reactor/reactorFuelRod_side");
+		this.icon[1] = ir.registerIcon(ModInformation.ID + ":machines/reactor/reactorYelloriumFuelRod_side");
+		this.icon[2] = ir.registerIcon(ModInformation.ID + ":machines/reactor/reactorBlutoniumFuelRod_side");
 	}
 
 	@Override
@@ -49,7 +50,7 @@ public class BlockReactorFuelRods extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item id, CreativeTabs tab, List list) {
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < 3; i++) {
 			list.add(new ItemStack(id, 1, i));
 		}
 	}

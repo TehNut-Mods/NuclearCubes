@@ -1,8 +1,8 @@
-package main.nuclearcubes.gui.reactor;
+package main.nuclearcubes.gui;
 
 import main.nuclearcubes.ModInformation;
-import main.nuclearcubes.containers.reactor.ContainerReactorController;
-import main.nuclearcubes.tileentities.reactor.TileEntityReactorController;
+import main.nuclearcubes.containers.ContainerFuelReprocessor;
+import main.nuclearcubes.tileentities.TileEntityFuelReprocessor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,17 +10,17 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import org.lwjgl.opengl.GL11;
 
-public class BlockGuiReactorController extends GuiContainer {
-	public static final ResourceLocation reactorControllerGui = new ResourceLocation(ModInformation.ID, "textures/guis/reactorController.png");
+public class BlockGuiFuelReprocessor extends GuiContainer {
+	public static final ResourceLocation fuelReprocessorGui = new ResourceLocation(ModInformation.ID, "textures/guis/fuelReprocessorGui.png");
 
 	@SuppressWarnings("unused")
-	private ContainerReactorController container;
-	private TileEntityReactorController te;
-	String containerName = "Controller";
+	private ContainerFuelReprocessor container;
+	private TileEntityFuelReprocessor te;
+	String containerName = "Fuel Reprocessor";
 
-	public BlockGuiReactorController(EntityPlayer player, TileEntityReactorController tile) {
-		super(new ContainerReactorController(player, tile));
-		this.container = (ContainerReactorController) this.inventorySlots;
+	public BlockGuiFuelReprocessor(EntityPlayer player, TileEntityFuelReprocessor tile) {
+		super(new ContainerFuelReprocessor(player, tile));
+		this.container = (ContainerFuelReprocessor) this.inventorySlots;
 		this.te = tile;
 	}
 
@@ -34,7 +34,7 @@ public class BlockGuiReactorController extends GuiContainer {
 	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
 		GL11.glColor4f(1F, 1F, 1F, 1F);
 
-		Minecraft.getMinecraft().getTextureManager().bindTexture(reactorControllerGui);
+		Minecraft.getMinecraft().getTextureManager().bindTexture(fuelReprocessorGui);
 		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, ySize);
 
 		int xStart = (width - xSize) / 2;
