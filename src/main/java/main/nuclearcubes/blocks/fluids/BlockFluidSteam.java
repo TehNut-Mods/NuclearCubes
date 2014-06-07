@@ -2,6 +2,7 @@ package main.nuclearcubes.blocks.fluids;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import main.nuclearcubes.ConfigHandler;
 import main.nuclearcubes.ModInformation;
 import main.nuclearcubes.blocks.BlockRegistry;
 import net.minecraft.block.material.Material;
@@ -34,7 +35,11 @@ public class BlockFluidSteam extends BlockFluidClassic {
 	@Override
 	public void registerBlockIcons(IIconRegister register) {
 		stillIcon = register.registerIcon(ModInformation.ID + ":fluids/steamStill");
-		flowingIcon = register.registerIcon(ModInformation.ID + ":fluids/steamFlowing");
+		if(ConfigHandler.steamySteam) {
+			flowingIcon = register.registerIcon(ModInformation.ID + ":fluids/steamFlowing_steam");
+		} else {
+			flowingIcon = register.registerIcon(ModInformation.ID + ":fluids/steamFlowing");
+		}
 
 		BlockRegistry.steam.setIcons(stillIcon, flowingIcon);
 		this.blockIcon = stillIcon;
