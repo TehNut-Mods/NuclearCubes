@@ -4,21 +4,32 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import main.nuclearcubes.ConfigHandler;
 import main.nuclearcubes.ModInformation;
 import main.nuclearcubes.blocks.BlockRegistry;
+import main.nuclearcubes.items.armor.ItemArmorHazmatChest;
+import main.nuclearcubes.items.armor.ItemArmorHazmatHelm;
 import main.nuclearcubes.items.tools.*;
 import main.nuclearcubes.util.BucketHandler;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidRegistry;
 
 public class ItemRegistry {
 
-	//ingots
-	public static Item ingots;
+	//armor materials
+	public static final ItemArmor.ArmorMaterial hazmat = EnumHelper.addArmorMaterial("hazmat", -1, new int[]{1, 2, 3, 4}, 0);
 
-	//dusts
+	//materials
+	public static Item ingots;
 	public static Item dusts;
+
+	//armor
+	public static Item armorHazmatHelm;
+	public static Item armorHazmatChest;
+	public static Item armorHazmatLeggings;
+	public static Item armorHazmatBoots;
 
 	//buckets
 	public static Item bucketYellorium;
@@ -31,10 +42,17 @@ public class ItemRegistry {
 
 	private static void registerItems() {
 
+		//materials
 		ingots = new ItemIngots().setUnlocalizedName(ModInformation.ID);
 		GameRegistry.registerItem(ingots, "ItemIngots");
 		dusts = new ItemDusts().setUnlocalizedName(ModInformation.ID);
 		GameRegistry.registerItem(dusts, "ItemDusts");
+
+		//armor
+		armorHazmatHelm = new ItemArmorHazmatHelm(hazmat, 0, 0);
+		GameRegistry.registerItem(armorHazmatHelm, "ItemArmorHazmatHelm");
+		armorHazmatChest = new ItemArmorHazmatChest(hazmat, 0, 1);
+		GameRegistry.registerItem(armorHazmatChest, "ItemArmorHazmatChest");
 
 		//buckets
 		bucketYellorium = new ItemYelloriumBucket(BlockRegistry.yelloriumBlock);

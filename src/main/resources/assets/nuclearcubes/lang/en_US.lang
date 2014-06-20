@@ -11,7 +11,7 @@ tile.nuclearcubes.reactor.controller.name=Reactor Controller
 tile.nuclearcubes.reactor.fuelrod.base.name=Fuel Rod
 tile.nuclearcubes.reactor.fuelrod.uranium.name=Uranium Fuel Rod
 tile.nuclearcubes.reactor.fuelrod.plutonium.name=Plutonium Fuel Rod
-item.nuclearcubes.reactor.fuelrod.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
+tile.nuclearcubes.reactor.fuelrod.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
 tile.nuclearcubes.reactor.controlrod.name=Reactor Control Rod
 tile.nuclearcubes.reactor.accessport.name=Reactor Access Port
 tile.nuclearcubes.reactor.redstoneport.name=Redstone Injector
@@ -32,7 +32,7 @@ tile.blockIngotStorage.yellorium.name=Block of Uranium
 tile.blockIngotStorage.cyanite.name=Block of Depleted Uranium
 tile.blockIngotStorage.blutonium.name=Block of Plutonium
 tile.blockIngotStorage.graphite.name=Block of Graphite
-item.blockIngotStorage.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
+tile.blockIngotStorage.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
 
 //FLUIDS
 tile.nuclearcubes.fluids.yellorium.name=Liquid Uranium
@@ -43,6 +43,8 @@ tile.nuclearcubes.fluids.blutonium.name=Liquid Plutonium
 fluid.tile.nuclearcubes.fluids.blutonium=Liquid Plutonium
 tile.nuclearcubes.fluids.steam.name=Steam
 fluid.tile.nuclearcubes.fluids.steam=Steam
+tile.nuclearcubes.fluids.corium.name=Fluid Corium
+fluid.tile.nuclearcubes.fluids.corium.name=Fluid Corium
 
 //INGOTS
 item.nuclearcubes.ingot.yellorium.name=Uranium Ingot
@@ -57,6 +59,12 @@ item.nuclearcubes.dust.cyanite.name=Depleted Uranium Dust
 item.nuclearcubes.dust.blutonium.name=Plutonium Dust
 item.nuclearcubes.dust.graphite.name=Graphite Dust
 item.nuclearcubes.dust.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
+
+//ARMOR
+item.nuclearcubes.armor.hazmat.helm.name=Hazmat Mask
+item.nuclearcubes.armor.hazmat.chest.name=Hazmat Bodysuit
+item.nuclearcubes.armor.hazmat.leggings.name=Hazmat Leggings
+item.nuclearcubes.armor.hazmat.boots.name=Hazmat Boots
 
 //BUCKETS
 item.nuclearcubes.bucket.yellorium.name=Uranium Bucket
