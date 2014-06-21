@@ -4,8 +4,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import main.nuclearcubes.ConfigHandler;
 import main.nuclearcubes.ModInformation;
 import main.nuclearcubes.blocks.BlockRegistry;
+import main.nuclearcubes.items.armor.ItemArmorHazmatBoots;
 import main.nuclearcubes.items.armor.ItemArmorHazmatChest;
 import main.nuclearcubes.items.armor.ItemArmorHazmatHelm;
+import main.nuclearcubes.items.armor.ItemArmorHazmatLeggings;
 import main.nuclearcubes.items.tools.*;
 import main.nuclearcubes.util.BucketHandler;
 import net.minecraft.init.Items;
@@ -53,6 +55,10 @@ public class ItemRegistry {
 		GameRegistry.registerItem(armorHazmatHelm, "ItemArmorHazmatHelm");
 		armorHazmatChest = new ItemArmorHazmatChest(hazmat, 0, 1);
 		GameRegistry.registerItem(armorHazmatChest, "ItemArmorHazmatChest");
+		armorHazmatLeggings = new ItemArmorHazmatLeggings(hazmat, 0, 2);
+		GameRegistry.registerItem(armorHazmatLeggings, "ItemArmorHazmatLeggings");
+		armorHazmatBoots = new ItemArmorHazmatBoots(hazmat, 0, 3);
+		GameRegistry.registerItem(armorHazmatBoots, "ItemArmorHazmatBoots");
 
 		//buckets
 		bucketYellorium = new ItemYelloriumBucket(BlockRegistry.yelloriumBlock);

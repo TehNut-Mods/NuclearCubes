@@ -8,13 +8,13 @@ import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
-public class ItemArmorHazmatHelm extends ItemArmor {
+public class ItemArmorHazmatBoots extends ItemArmor {
 
-	public ItemArmorHazmatHelm(ArmorMaterial material, int renderIndex, int armorType) {
+	public ItemArmorHazmatBoots(ArmorMaterial material, int renderIndex, int armorType) {
 		super(material, renderIndex, armorType);
 		this.setCreativeTab(NuclearCubes.tabNuclearCubes);
-		this.setUnlocalizedName(ModInformation.ID + ".armor.hazmat.helm");
-		this.setTextureName(ModInformation.ID + ":armor/hazmatHelm");
+		this.setUnlocalizedName(ModInformation.ID + ".armor.hazmat.boots");
+		this.setTextureName(ModInformation.ID + ":armor/hazmatBoots");
 	}
 
 	@Override

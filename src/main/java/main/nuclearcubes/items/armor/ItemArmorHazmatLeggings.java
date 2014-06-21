@@ -8,18 +8,18 @@ import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
-public class ItemArmorHazmatHelm extends ItemArmor {
+public class ItemArmorHazmatLeggings extends ItemArmor {
 
-	public ItemArmorHazmatHelm(ArmorMaterial material, int renderIndex, int armorType) {
+	public ItemArmorHazmatLeggings(ArmorMaterial material, int renderIndex, int armorType) {
 		super(material, renderIndex, armorType);
 		this.setCreativeTab(NuclearCubes.tabNuclearCubes);
-		this.setUnlocalizedName(ModInformation.ID + ".armor.hazmat.helm");
-		this.setTextureName(ModInformation.ID + ":armor/hazmatHelm");
+		this.setUnlocalizedName(ModInformation.ID + ".armor.hazmat.leggings");
+		this.setTextureName(ModInformation.ID + ":armor/hazmatLeggings");
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public String getArmorTexture(ItemStack Stack, Entity entity, int Slot, String type) {
-		return ModInformation.ID + ":textures/models/armor/hazmat_layer1.png";
+		return ModInformation.ID + ":textures/models/armor/hazmat_layer2.png";
 	}
 }
