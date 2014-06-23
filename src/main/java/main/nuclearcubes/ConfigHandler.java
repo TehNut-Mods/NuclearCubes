@@ -19,7 +19,6 @@ public class ConfigHandler {
 	public static boolean registerCharcoalFurnaceRecipe;
 	public static boolean registerCoalCraftingRecipe;
 	public static boolean registerCharcoalCraftingRecipe;
-	public static boolean registerYelloriteSmeltToUranium;
 
 	public static boolean useSteelForIron;
 	public static boolean useExpensiveGlass;
@@ -50,7 +49,6 @@ public class ConfigHandler {
 		registerCharcoalFurnaceRecipe = config.get(recipes, "registerCharcoalForSmelting", true, "If set, charcoal will be smeltable into graphite bars. Disable this if other mods need to smelt charcoal into their own products. [DEFAULT- TRUE]").getBoolean(registerCharcoalFurnaceRecipe);
 		registerCoalCraftingRecipe = config.get(recipes, "registerGraphiteCoalCraftingRecipes", false, "If set, graphite bars can be crafted from 2 gravel, 1 coal. Use this if other mods interfere with the smelting recipe. [DEFAULT- FALSE]").getBoolean(registerCoalCraftingRecipe);
 		registerCharcoalCraftingRecipe = config.get(recipes, "registerGraphiteCharcoalCraftingRecipes", false, "If set, graphite bars can be crafted from 2 gravel, 1 charcoal. Use this if other mods interfere with the smelting recipe. [DEFAULT- FALSE]").getBoolean(registerCharcoalCraftingRecipe);
-		registerYelloriteSmeltToUranium = config.get(recipes, "registerYelloriteSmeltToUranium", false, "If set, yellorite ore will smelt into whichever item is registered as ingotUranium in the ore dictionary. If false, it will smelt into ingotYellorium. [DEFAULT- FALSE]").getBoolean(registerYelloriteSmeltToUranium);
 
 		useSteelForIron = config.get(recipes, "requireSteelInsteadOfIron", false, "If set, then all Big Reactors components will require steel ingots (ingotSteel) in place of iron ingots. Will be ignored if no other mod registers steel ingots. [DEFAULT- FALSE]").getBoolean(useSteelForIron);
 		useExpensiveGlass = config.get(recipes, "requireObsidianGlass", false, "If set, then Big Reactors will require hardened or reinforced glass (glassHardened or glassReinforced) instead of plain glass. Will be ignored if no other mod registers those glass types. [DEFAULT- FALSE]").getBoolean(useExpensiveGlass);

@@ -50,9 +50,6 @@ public class NuclearCubes {
 		ItemRegistry.registerFullItems();
 		TERegistry.registerTileEntities();
 
-		ItemRecipeRegistry.registerFullRecipes();
-		BlockRecipeRegistry.registerFullRecipes();
-
 		OreDictHandler.registerFullOreDict();
 		GameRegistry.registerWorldGenerator(new GenerationHandler(), 2);
 		NetworkRegistry.INSTANCE.registerGuiHandler(NuclearCubes.instance, new GuiHandler());
@@ -61,6 +58,10 @@ public class NuclearCubes {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+
+		BlockRecipeRegistry.registerFullRecipes();
+		ItemRecipeRegistry.registerFullRecipes();
+		ItemRecipeRegistry.registerMachineRecipes();
 		if (event.getSide() == Side.CLIENT && ConfigHandler.enableCapes) {
 			MinecraftForge.EVENT_BUS.register(new CapeEventHandler());
 		}

@@ -1,11 +1,14 @@
 package main.nuclearcubes.items;
 
+import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.registry.GameRegistry;
 import main.nuclearcubes.ConfigHandler;
 import main.nuclearcubes.blocks.BlockRegistry;
+import main.nuclearcubes.util.OreDictHandler;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 
 public class ItemRecipeRegistry {
 
@@ -21,6 +24,13 @@ public class ItemRecipeRegistry {
 		}
 
 		GameRegistry.addRecipe(new ItemStack(ItemRegistry.armorHazmatHelm, 1), "WAW", "WFW", 'W', new ItemStack(Blocks.wool), 'A', new ItemStack(Items.leather_helmet, 1), 'F', new ItemStack(ItemRegistry.filter, 1));
+		GameRegistry.addRecipe(new ItemStack(ItemRegistry.armorHazmatChest, 1), "WAW", "WFW", 'W', new ItemStack(Blocks.wool), 'A', new ItemStack(Items.leather_chestplate, 1), 'F', new ItemStack(ItemRegistry.filter, 1));
+		GameRegistry.addRecipe(new ItemStack(ItemRegistry.armorHazmatLeggings, 1), "WAW", "WFW", 'W', new ItemStack(Blocks.wool), 'A', new ItemStack(Items.leather_leggings, 1), 'F', new ItemStack(ItemRegistry.filter, 1));
+		if(OreDictHandler.oreNameExists("rubber")) {
+            GameRegistry.addRecipe(new ItemStack(ItemRegistry.armorHazmatBoots, 1), "WAW", "RFR", 'W', new ItemStack(Blocks.wool), 'A', new ItemStack(Items.leather_boots, 1), 'F', new ItemStack(ItemRegistry.filter, 1), 'R', "rubber");
+		} else {
+			GameRegistry.addRecipe(new ItemStack(ItemRegistry.armorHazmatBoots, 1), "WAW", "WFW", 'W', new ItemStack(Blocks.wool), 'A', new ItemStack(Items.leather_boots, 1), 'F', new ItemStack(ItemRegistry.filter, 1));
+		}
 	}
 
 	private static void registerFurnaceRecipes() {
@@ -44,6 +54,19 @@ public class ItemRecipeRegistry {
 	}
 
 	public static void registerMachineRecipes() {
+
+		//Ore to dust
+		NBTTagCompound toSend = new NBTTagCompound();
+		toSend.setInteger("energy", 2000);
+		toSend.setTag("input", new NBTTagCompound());
+		toSend.setTag("primaryOutput", new NBTTagCompound());
+		toSend.setTag("secondaryOutput", new NBTTagCompound());
+
+		new ItemStack(BlockRegistry.blockOres, 1, 0).writeToNBT(toSend.getCompoundTag("input"));
+		new ItemStack(ItemRegistry.dusts, 1, 0).writeToNBT(toSend.getCompoundTag("primaryOutput"));
+		new ItemStack(ItemRegistry.dusts, 1, 0).writeToNBT(toSend.getCompoundTag("secondaryOutput"));
+		toSend.setInteger("secondaryChance", 15);
+		FMLInterModComms.sendMessage("ThermalExpansion", "PulverizerRecipe OR SawmillRecipe", toSend);
 
 	}
 

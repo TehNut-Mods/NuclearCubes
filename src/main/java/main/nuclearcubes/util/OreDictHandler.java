@@ -22,6 +22,13 @@ public class OreDictHandler {
 	public static String dustBlutonium = "dustBlutonium";
 	public static String dustGraphite = "dustGraphite";
 
+	public static final String BLOCK = "block";
+	public static final String ORE = "ore";
+	public static final String DUST = "dust";
+	public static final String INGOT = "ingot";
+	public static final String NUGGET = "nugget";
+	public static final String LOG = "log";
+
 	private static void registerOreDict() {
 
 		OreDictionary.registerOre(oreYellorite, new ItemStack(BlockRegistry.blockOres, 1, 0));
@@ -50,6 +57,80 @@ public class OreDictHandler {
 		OreDictionary.registerOre(dustCyanite, new ItemStack(ItemRegistry.dusts, 1, 1));
 		OreDictionary.registerOre(dustBlutonium, new ItemStack(ItemRegistry.dusts, 1, 2));
 		OreDictionary.registerOre(dustGraphite, new ItemStack(ItemRegistry.dusts, 1, 3));
+	}
+
+	public static ItemStack cloneStack(ItemStack stack, int stackSize) {
+
+		if (stack == null) {
+			return null;
+		}
+		ItemStack retStack = stack.copy();
+		retStack.stackSize = stackSize;
+
+		return retStack;
+	}
+
+	public static boolean hasOreName(ItemStack stack) {
+
+		return !getOreName(stack).equals("Unknown");
+	}
+
+	public static String getOreName(ItemStack stack) {
+
+		return OreDictionary.getOreName(OreDictionary.getOreID(stack));
+	}
+
+	public static boolean isOreID(ItemStack stack, int oreID) {
+
+		return OreDictionary.getOreID(stack) == oreID;
+	}
+
+	public static boolean isOreName(ItemStack stack, String oreName) {
+
+		return OreDictionary.getOreName(OreDictionary.getOreID(stack)).equals(oreName);
+	}
+
+	public static boolean oreNameExists(String oreName) {
+
+		return !OreDictionary.getOres(oreName).isEmpty();
+	}
+
+	public static ItemStack getOre(String oreName) {
+
+		if (!oreNameExists(oreName)) {
+			return null;
+		}
+		return cloneStack(OreDictionary.getOres(oreName).get(0), 1);
+	}
+
+	public static boolean isBlock(ItemStack stack) {
+
+		return getOreName(stack).startsWith(BLOCK);
+	}
+
+	public static boolean isOre(ItemStack stack) {
+
+		return getOreName(stack).startsWith(ORE);
+	}
+
+	public static boolean isDust(ItemStack stack) {
+
+		return getOreName(stack).startsWith(DUST);
+	}
+
+	public static boolean isIngot(ItemStack stack) {
+
+		return getOreName(stack).startsWith(INGOT);
+	}
+
+	public static boolean isNugget(ItemStack stack) {
+
+		return getOreName(stack).startsWith(NUGGET);
+	}
+
+	public static boolean isLog(ItemStack stack) {
+
+		return getOreName(stack).startsWith(LOG);
 	}
 
 	public static void registerFullOreDict() {
