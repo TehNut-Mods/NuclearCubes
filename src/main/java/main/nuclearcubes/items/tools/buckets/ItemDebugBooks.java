@@ -1,4 +1,4 @@
-package main.nuclearcubes.items.tools;
+package main.nuclearcubes.items.tools.buckets;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

@@ -1,4 +1,4 @@
-package main.nuclearcubes.items.tools;
+package main.nuclearcubes.items.tools.buckets;
 
 import main.nuclearcubes.NuclearCubes;
 import main.nuclearcubes.ModInformation;
@@ -6,15 +6,14 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemBucket;
 
-public class ItemYelloriumBucket extends ItemBucket {
+public class ItemCyaniteBucket extends ItemBucket {
 
-	public ItemYelloriumBucket(Block block) {
+	public ItemCyaniteBucket(Block block) {
 		super(block);
 		this.maxStackSize = 1;
 		this.setContainerItem(Items.bucket);
-		this.setTextureName(ModInformation.ID + ":tools/bucketYellorium");
+		this.setTextureName(ModInformation.ID + ":tools/bucketCyanite");
 		this.setCreativeTab(NuclearCubes.tabNuclearCubes);
-		this.setUnlocalizedName(ModInformation.ID + ".bucket.yellorium");
+		this.setUnlocalizedName(ModInformation.ID + ".bucket.cyanite");
 	}
-
 }

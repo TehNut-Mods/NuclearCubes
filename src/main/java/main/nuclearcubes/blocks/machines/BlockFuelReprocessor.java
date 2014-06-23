@@ -1,4 +1,4 @@
-package main.nuclearcubes.blocks;
+package main.nuclearcubes.blocks.machines;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -21,7 +21,7 @@ public class BlockFuelReprocessor extends BlockContainer {
 	public BlockFuelReprocessor() {
 
 		super(Material.iron);
-		this.setBlockName(ModInformation.ID + ".fuel.reprocessor");
+		this.setBlockName(ModInformation.ID + ".machine.fuel.reprocessor");
 		this.setBlockTextureName(ModInformation.ID + ":machines/fuelReprocessor_off");
 		this.setStepSound(soundTypeMetal);
 		this.setCreativeTab(NuclearCubes.tabNuclearCubes);

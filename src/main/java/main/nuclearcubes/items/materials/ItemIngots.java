@@ -1,4 +1,4 @@
-package main.nuclearcubes.items;
+package main.nuclearcubes.items.materials;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -12,11 +12,12 @@ import net.minecraft.util.IIcon;
 
 import java.util.List;
 
-public class ItemDusts extends Item {
+public class ItemIngots extends Item {
+
 
 	public IIcon[] icon = new IIcon[5];
 
-	public ItemDusts() {
+	public ItemIngots() {
 		this.setCreativeTab(NuclearCubes.tabNuclearCubes);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
@@ -27,26 +28,26 @@ public class ItemDusts extends Item {
 		String name = "";
 		switch (itemstack.getItemDamage()) {
 			case 0: {
-				name = "dust.yellorium";
+				name = "ingot.yellorium";
 				break;
 			}
 			case 1: {
-				name = "dust.cyanite";
+				name = "ingot.cyanite";
 				break;
 			}
 			case 2: {
-				name = "dust.blutonium";
+				name = "ingot.blutonium";
 				break;
 			}
 			case 3: {
-				name = "dust.graphite";
+				name = "chunk.graphite";
 				break;
 			}
 			default:
 				name = "nothing";
 				break;
 		}
-		return getUnlocalizedName() + "." + name;
+		return getUnlocalizedName() + ".material." + name;
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -56,10 +57,10 @@ public class ItemDusts extends Item {
 
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister ri) {
-		this.icon[0] = ri.registerIcon(ModInformation.ID + ":dusts/dustYellorium");
-		this.icon[1] = ri.registerIcon(ModInformation.ID + ":dusts/dustCyanite");
-		this.icon[2] = ri.registerIcon(ModInformation.ID + ":dusts/dustBlutonium");
-		this.icon[3] = ri.registerIcon(ModInformation.ID + ":dusts/dustGraphite");
+		this.icon[0] = ri.registerIcon(ModInformation.ID + ":ingots/ingotYellorium");
+		this.icon[1] = ri.registerIcon(ModInformation.ID + ":ingots/ingotCyanite");
+		this.icon[2] = ri.registerIcon(ModInformation.ID + ":ingots/ingotBlutonium");
+		this.icon[3] = ri.registerIcon(ModInformation.ID + ":ingots/chunkGraphite");
 	}
 
 	@SuppressWarnings({"rawtypes", "unchecked"})
@@ -69,6 +70,4 @@ public class ItemDusts extends Item {
 			list.add(new ItemStack(this, 1, i));
 		}
 	}
-
-
 }

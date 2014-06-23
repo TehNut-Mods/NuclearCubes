@@ -8,7 +8,10 @@ import main.nuclearcubes.items.armor.ItemArmorHazmatBoots;
 import main.nuclearcubes.items.armor.ItemArmorHazmatChest;
 import main.nuclearcubes.items.armor.ItemArmorHazmatHelm;
 import main.nuclearcubes.items.armor.ItemArmorHazmatLeggings;
-import main.nuclearcubes.items.tools.*;
+import main.nuclearcubes.items.materials.ItemDusts;
+import main.nuclearcubes.items.materials.ItemFilter;
+import main.nuclearcubes.items.materials.ItemIngots;
+import main.nuclearcubes.items.tools.buckets.*;
 import main.nuclearcubes.util.BucketHandler;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -38,6 +41,10 @@ public class ItemRegistry {
 	public static Item bucketCyanite;
 	public static Item bucketBlutonium;
 	public static Item bucketSteam;
+	public static Item bucketCorium;
+
+	//other tools
+	public static Item filter;
 
 	//debug
 	public static Item debugBooks;
@@ -71,6 +78,12 @@ public class ItemRegistry {
 			bucketSteam = new ItemSteamBucket(BlockRegistry.steamBlock);
 			GameRegistry.registerItem(bucketSteam, bucketSteam.getUnlocalizedName());
 		}
+		bucketCorium = new ItemCoriumBucket(BlockRegistry.coriumBlock);
+		GameRegistry.registerItem(bucketCorium, bucketCorium.getUnlocalizedName());
+
+		//other tools
+		filter = new ItemFilter();
+		GameRegistry.registerItem(filter, "ItemFilter");
 
 		//debug
 		if(ConfigHandler.enableDebugTools) {
@@ -90,6 +103,8 @@ public class ItemRegistry {
 			BucketHandler.INSTANCE.buckets.put(BlockRegistry.steamBlock, bucketSteam);
 			FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("steam", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketSteam), new ItemStack(Items.bucket));
 		}
+		BucketHandler.INSTANCE.buckets.put(BlockRegistry.coriumBlock, bucketCorium);
+		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("corium", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketCorium), new ItemStack(Items.bucket));
 	}
 
 	public static void registerFullItems() {

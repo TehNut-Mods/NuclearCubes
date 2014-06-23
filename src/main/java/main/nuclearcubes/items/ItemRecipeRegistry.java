@@ -19,6 +19,8 @@ public class ItemRecipeRegistry {
 		if(ConfigHandler.registerCharcoalCraftingRecipe) {
 			GameRegistry.addRecipe(new ItemStack(ItemRegistry.ingots, 1, 3), "GCG", 'G', new ItemStack(Blocks.gravel), 'C', new ItemStack(Items.coal, 1, 1));
 		}
+
+		GameRegistry.addRecipe(new ItemStack(ItemRegistry.armorHazmatHelm, 1), "WAW", "WFW", 'W', new ItemStack(Blocks.wool), 'A', new ItemStack(Items.leather_helmet, 1), 'F', new ItemStack(ItemRegistry.filter, 1));
 	}
 
 	private static void registerFurnaceRecipes() {
@@ -38,6 +40,11 @@ public class ItemRecipeRegistry {
 		if(ConfigHandler.registerCharcoalFurnaceRecipe) {
 			GameRegistry.addSmelting(new ItemStack(Items.coal, 1, 1), new ItemStack(ItemRegistry.ingots, 1, 3), 0.7F);
 		}
+
+	}
+
+	public static void registerMachineRecipes() {
+
 	}
 
 	public static void registerFullRecipes() {

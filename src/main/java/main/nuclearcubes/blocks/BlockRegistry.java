@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import main.nuclearcubes.ConfigHandler;
 import main.nuclearcubes.ModInformation;
 import main.nuclearcubes.blocks.fluids.*;
+import main.nuclearcubes.blocks.machines.*;
 import main.nuclearcubes.blocks.reactor.*;
 import main.nuclearcubes.items.blocks.ItemBlockIngotStorage;
 import main.nuclearcubes.items.blocks.ItemBlockOres;
@@ -28,7 +29,8 @@ public class BlockRegistry {
 	public static Block redstonePortReactor;
 
 	//machines
-	public static Block cyaniteReprocessor;
+	public static Block fuelReprocessor;
+	public static Block infuser;
 
 	//blocks
 	public static Block ingotStorage;
@@ -73,8 +75,10 @@ public class BlockRegistry {
 		GameRegistry.registerBlock(redstonePortReactor, "BlockReactorRedstonePort");
 
 		//machines
-		cyaniteReprocessor = new BlockFuelReprocessor();
-		GameRegistry.registerBlock(cyaniteReprocessor, "BlockFuelReprocessor");
+		fuelReprocessor = new BlockFuelReprocessor();
+		GameRegistry.registerBlock(fuelReprocessor, "BlockFuelReprocessor");
+		infuser = new BlockInfuser();
+		GameRegistry.registerBlock(infuser, "BlockInfuser");
 
 		//blocks
 		ingotStorage = new BlockIngotStorage().setBlockName("blockIngotStorage");

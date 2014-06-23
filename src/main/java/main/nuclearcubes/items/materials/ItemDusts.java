@@ -1,4 +1,4 @@
-package main.nuclearcubes.items;
+package main.nuclearcubes.items.materials;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -12,12 +12,11 @@ import net.minecraft.util.IIcon;
 
 import java.util.List;
 
-public class ItemIngots extends Item {
-
+public class ItemDusts extends Item {
 
 	public IIcon[] icon = new IIcon[5];
 
-	public ItemIngots() {
+	public ItemDusts() {
 		this.setCreativeTab(NuclearCubes.tabNuclearCubes);
 		this.setHasSubtypes(true);
 		this.setMaxDamage(0);
@@ -28,26 +27,26 @@ public class ItemIngots extends Item {
 		String name = "";
 		switch (itemstack.getItemDamage()) {
 			case 0: {
-				name = "ingot.yellorium";
+				name = "dust.yellorium";
 				break;
 			}
 			case 1: {
-				name = "ingot.cyanite";
+				name = "dust.cyanite";
 				break;
 			}
 			case 2: {
-				name = "ingot.blutonium";
+				name = "dust.blutonium";
 				break;
 			}
 			case 3: {
-				name = "chunk.graphite";
+				name = "dust.graphite";
 				break;
 			}
 			default:
 				name = "nothing";
 				break;
 		}
-		return getUnlocalizedName() + "." + name;
+		return getUnlocalizedName() + ".material." + name;
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -57,10 +56,10 @@ public class ItemIngots extends Item {
 
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister ri) {
-		this.icon[0] = ri.registerIcon(ModInformation.ID + ":ingots/ingotYellorium");
-		this.icon[1] = ri.registerIcon(ModInformation.ID + ":ingots/ingotCyanite");
-		this.icon[2] = ri.registerIcon(ModInformation.ID + ":ingots/ingotBlutonium");
-		this.icon[3] = ri.registerIcon(ModInformation.ID + ":ingots/chunkGraphite");
+		this.icon[0] = ri.registerIcon(ModInformation.ID + ":dusts/dustYellorium");
+		this.icon[1] = ri.registerIcon(ModInformation.ID + ":dusts/dustCyanite");
+		this.icon[2] = ri.registerIcon(ModInformation.ID + ":dusts/dustBlutonium");
+		this.icon[3] = ri.registerIcon(ModInformation.ID + ":dusts/dustGraphite");
 	}
 
 	@SuppressWarnings({"rawtypes", "unchecked"})
@@ -70,4 +69,6 @@ public class ItemIngots extends Item {
 			list.add(new ItemStack(this, 1, i));
 		}
 	}
+
+
 }

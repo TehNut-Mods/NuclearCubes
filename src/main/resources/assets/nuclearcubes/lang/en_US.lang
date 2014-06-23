@@ -26,7 +26,8 @@ tile.nuclearcubes.turbine.glass.name=Turbine Glass
 tile.nuclearcubes.turbine.controller.name=Turbine Controller
 
 //MACHINES
-tile.nuclearcubes.fuel.reprocessor.name=Fuel Reprocessor
+tile.nuclearcubes.machine.fuel.reprocessor.name=Fuel Reprocessor
+tile.nuclearcubes.machine.infuser.name=Uranium Infuser
 
 //STORAGE
 tile.blockIngotStorage.yellorium.name=Block of Uranium
@@ -48,18 +49,18 @@ tile.nuclearcubes.fluids.corium.name=Fluid Corium
 fluid.tile.nuclearcubes.fluids.corium.name=Fluid Corium
 
 //INGOTS
-item.nuclearcubes.ingot.yellorium.name=Uranium Ingot
-item.nuclearcubes.ingot.cyanite.name=Depleted Uranium Ingot
-item.nuclearcubes.ingot.blutonium.name=Plutonium Ingot
-item.nuclearcubes.chunk.graphite.name=Graphite Chunk
-item.nuclearcubes.ingot.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
+item.nuclearcubes.material.ingot.yellorium.name=Uranium Ingot
+item.nuclearcubes.material.ingot.cyanite.name=Depleted Uranium Ingot
+item.nuclearcubes.material.ingot.blutonium.name=Plutonium Ingot
+item.nuclearcubes.material.chunk.graphite.name=Graphite Chunk
+item.nuclearcubes.material.ingot.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
 
 //DUSTS
-item.nuclearcubes.dust.yellorium.name=Uranium Dust
-item.nuclearcubes.dust.cyanite.name=Depleted Uranium Dust
-item.nuclearcubes.dust.blutonium.name=Plutonium Dust
-item.nuclearcubes.dust.graphite.name=Graphite Dust
-item.nuclearcubes.dust.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
+item.nuclearcubes.material.dust.yellorium.name=Uranium Dust
+item.nuclearcubes.material.dust.cyanite.name=Depleted Uranium Dust
+item.nuclearcubes.material.dust.blutonium.name=Plutonium Dust
+item.nuclearcubes.material.dust.graphite.name=Graphite Dust
+item.nuclearcubes.material.dust.nothing.name=Anti-Derp Protocol - YOU SHOULD NOT HAVE THIS
 
 //ARMOR
 item.nuclearcubes.armor.hazmat.helm.name=Hazmat Mask
@@ -72,6 +73,10 @@ item.nuclearcubes.bucket.yellorium.name=Uranium Bucket
 item.nuclearcubes.bucket.cyanite.name=Depleted Uranium Bucket
 item.nuclearcubes.bucket.blutonium.name=Plutonium Bucket
 item.nuclearcubes.bucket.steam.name=Steam Bucket
+item.nuclearcubes.bucket.corium.name=Corium Bucket
+
+//OTHER TOOLS
+item.nuclearcubes.material.filter.name=Filter
 
 //DEBUG
 item.nuclearcubes.debug.redBook.name=Red Debug Book
