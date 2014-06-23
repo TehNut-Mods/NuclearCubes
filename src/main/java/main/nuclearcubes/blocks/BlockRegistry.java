@@ -8,6 +8,7 @@ import main.nuclearcubes.blocks.reactor.*;
 import main.nuclearcubes.items.blocks.ItemBlockIngotStorage;
 import main.nuclearcubes.items.blocks.ItemBlockOres;
 import main.nuclearcubes.items.blocks.ItemBlockReactorFuelRods;
+import main.nuclearcubes.items.blocks.ItemBlockReactorGlass;
 import net.minecraft.block.Block;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -53,7 +54,7 @@ public class BlockRegistry {
 		casingReactor = new BlockReactorCasing();
 		GameRegistry.registerBlock(casingReactor, "BlockReactorCasing");
 		glassReactor = new BlockReactorGlass();
-		GameRegistry.registerBlock(glassReactor, "BlockReactorGlass");
+		GameRegistry.registerBlock(glassReactor, ItemBlockReactorGlass.class, glassReactor.getUnlocalizedName());
 		controllerReactor = new BlockReactorController();
 		GameRegistry.registerBlock(controllerReactor, "BlockReactorController");
 		fuelRodReactor = new BlockReactorFuelRods();

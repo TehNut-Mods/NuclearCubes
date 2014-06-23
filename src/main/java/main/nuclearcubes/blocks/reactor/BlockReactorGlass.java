@@ -2,22 +2,44 @@ package main.nuclearcubes.blocks.reactor;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import main.nuclearcubes.NuclearCubes;
 import main.nuclearcubes.ModInformation;
+import main.nuclearcubes.NuclearCubes;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
+
+import java.util.List;
 
 public class BlockReactorGlass extends Block {
 
-//	protected IIcon[] icons = new IIcon[16];
+	protected IIcon[] icons = new IIcon[16];
 
 	public BlockReactorGlass() {
 		super(Material.glass);
 		this.setBlockName(ModInformation.ID + ".reactor.glass");
-		this.setBlockTextureName(ModInformation.ID + ":machines/reactor/reactorGlass_default");
+		this.setBlockTextureName(ModInformation.ID + ":machines/reactor/reactorGlass_0");
 		this.setStepSound(soundTypeGlass);
 		this.setCreativeTab(NuclearCubes.tabNuclearCubes);
 		this.setHardness(7);
+		this.renderAsNormalBlock();
+		this.getRenderBlockPass();
+		this.shouldSideBeRendered();
+		if(shouldGlassGlow()) {
+			this.setLightLevel(1F);
+			this.setLightOpacity(1);
+		}
+	}
+
+	@SuppressWarnings({"unchecked", "rawtypes"})
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void getSubBlocks(Item id, CreativeTabs tab, List list) {
+		for (int i = 0; i < 2; i++) {
+			list.add(new ItemStack(id, 1, i));
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -37,12 +59,18 @@ public class BlockReactorGlass extends Block {
 		return true;
 	}
 
+	public boolean shouldGlassGlow() {
+		return true;
+	}
+
+//  ALMOST WORKS, NOW :D THE INSIDES JUST KEEP RENDERING AND I DUNNO WHY D:
+
 //	@Override
 //	@SideOnly(Side.CLIENT)
 //	public IIcon getIcon(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5) {
 //		return par1IBlockAccess.getBlockMetadata(par2, par3, par4) == 15 ? icons[0] : getConnectedBlockTexture(par1IBlockAccess, par2, par3, par4, par5, icons);
 //	}
-
+//
 //	public boolean shouldConnectToBlock(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, Block par5, int par6) {
 //		return par5 == (Block) this;
 //	}
@@ -355,8 +383,7 @@ public class BlockReactorGlass extends Block {
 //	}
 //
 //	@Override
-//	public void registerBlockIcons (IIconRegister par1IconRegister)
-//	{
+//	public void registerBlockIcons (IIconRegister par1IconRegister) {
 //		icons[0] = par1IconRegister.registerIcon(ModInformation.ID + ":machines/reactor/reactorGlass_0");
 //		icons[1] = par1IconRegister.registerIcon(ModInformation.ID + ":machines/reactor/reactorGlass_1");
 //		icons[2] = par1IconRegister.registerIcon(ModInformation.ID + ":machines/reactor/reactorGlass_2");

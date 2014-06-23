@@ -76,4 +76,6 @@ public class BlockReactorFuelRods extends Block {
 	public boolean shouldSideBeRendered() {
 		return true;
 	}
+
+
 }

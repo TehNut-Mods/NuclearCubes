@@ -43,26 +43,27 @@ public class BlockFluidCorium extends BlockFluidClassic {
 
 	@Override
 	public boolean canDisplace(IBlockAccess world, int x, int y, int z) {
-		if (world.getBlock(x,  y,  z).getMaterial().isLiquid()) return false;
-		return super.canDisplace(world, x, y, z);
+		if (world.getBlock(x,  y,  z).getMaterial().isLiquid()) {
+			return super.canDisplace(world, x, y, z);
+		}
+		return false;
 	}
 
 	@Override
 	public boolean displaceIfPossible(World world, int x, int y, int z) {
-		if (world.getBlock(x,  y,  z).getMaterial().isLiquid()) return false;
-		return super.displaceIfPossible(world, x, y, z);
+		if (world.getBlock(x,  y,  z).getMaterial().isLiquid()) {
+			return super.displaceIfPossible(world, x, y, z);
+		}
+		return false;
 	}
 
 	@Override
 	public int getFireSpreadSpeed(IBlockAccess world, int x, int y, int z, ForgeDirection face) {
-
 		return 800;
 	}
 
 	@Override
 	public boolean isFireSource(World world, int x, int y, int z, ForgeDirection side) {
-
 		return true;
 	}
-
 }

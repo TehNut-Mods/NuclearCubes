@@ -33,6 +33,7 @@ public class ConfigHandler {
 	public static boolean enablePlayerEffects;
 	public static boolean registerOwnSteam;
 
+	public static boolean canSideways;
 	public static boolean steamySteam;
 	public static boolean aprilFools;
 
@@ -63,6 +64,7 @@ public class ConfigHandler {
 		enablePlayerEffects = config.get(general, "enablePlayerEffects", true, "Negative effects given to player if they enter a radiation zone. [DEFAULT- TRUE]").getBoolean(enablePlayerEffects);
 		registerOwnSteam = config.get(general, "registerOwnSteam", true, "Register BR steam if nothing else adds Steam. [DEFAULT- TRUE]").getBoolean(registerOwnSteam);
 
+		canSideways = config.get(humor, "canSideways", false, "Can you sideways your reactor? [DEFAULT- FALSE]").getBoolean(canSideways);
 		steamySteam = config.get(humor, "steamySteam", false, "Steamify your steam [DEFAULT- FALSE]").getBoolean(steamySteam);
 		aprilFools = config.get(humor, "trolololol", true, "trololololololololollolololololololloollololololololololol [does nothing... yet... [DEFAULT- TRUE]").getBoolean(aprilFools);
 
