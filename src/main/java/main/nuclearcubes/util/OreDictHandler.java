@@ -11,8 +11,8 @@ public class OreDictHandler {
 
 	public static String oreYellorite = "oreYellorite";
 
-	public static String ingotYellorium;
 	public static String ingotIronOrSteel;
+	public static String ingotYellorium = "ingotYellorium";
 	public static String ingotCyanite = "ingotCyanite";
 	public static String ingotBlutonium = "ingotBlutonium";
 	public static String chunkGraphite = "chunkGraphite";
@@ -32,14 +32,6 @@ public class OreDictHandler {
 	private static void registerOreDict() {
 
 		OreDictionary.registerOre(oreYellorite, new ItemStack(BlockRegistry.blockOres, 1, 0));
-
-		//This is currently broken while I figure out how to work with the OreDict...
-		if(ConfigHandler.registerYelloriteSmeltToUranium && OreDictionary.getOres("ingotUranium").size() > 0) {
-			ingotYellorium = "ingotUranium";
-			NuclearCubes.logger.debug("Registering yellorium as ingotUranium...");
-		} else {
-			ingotYellorium = "ingotYellorium";
-		}
 
 		if(ConfigHandler.useSteelForIron && OreDictionary.getOres("ingotSteel").size() > 0) {
 			ingotIronOrSteel = "ingotSteel";

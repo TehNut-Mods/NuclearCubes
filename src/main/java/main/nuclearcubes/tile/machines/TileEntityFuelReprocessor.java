@@ -1,19 +1,18 @@
-package main.nuclearcubes.tileentities.reactor;
+package main.nuclearcubes.tile.machines;
 
-import main.nuclearcubes.tileentities.TileEntityBase;
+import main.nuclearcubes.tile.TileEntityBase;
 import net.minecraft.item.ItemStack;
 
-public class TileEntityReactorController extends TileEntityBase {
+public class TileEntityFuelReprocessor extends TileEntityBase {
 
-	@SuppressWarnings("unused")
 	private String field_145958_o;
 
-	public TileEntityReactorController() {
+	public TileEntityFuelReprocessor() {
 	}
 
 	@Override
 	public String getInventoryName() {
-		return null;
+		return "Fuel Reprocessor";
 	}
 
 	@Override
@@ -53,4 +52,18 @@ public class TileEntityReactorController extends TileEntityBase {
 		return scale;
 	}
 
+//	@Override
+//	public int receiveEnergy(ForgeDirection from, int maxReceive, boolean simulate) {
+//		return 1000;
+//	}
+//
+//	@Override
+//	public 	int extractEnergy(ForgeDirection from, int maxExtract, boolean simulate) {
+//		return 0;
+//	}
+//
+//	@Override
+//	public int getEnergyStored(ForgeDirection from) {
+//
+//	}
 }

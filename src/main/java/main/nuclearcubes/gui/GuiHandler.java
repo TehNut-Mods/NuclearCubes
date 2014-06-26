@@ -1,11 +1,11 @@
 package main.nuclearcubes.gui;
 
 import cpw.mods.fml.common.network.IGuiHandler;
-import main.nuclearcubes.containers.ContainerFuelReprocessor;
+import main.nuclearcubes.containers.machines.ContainerFuelReprocessor;
 import main.nuclearcubes.containers.reactor.ContainerReactorController;
 import main.nuclearcubes.gui.reactor.BlockGuiReactorController;
-import main.nuclearcubes.tileentities.TileEntityFuelReprocessor;
-import main.nuclearcubes.tileentities.reactor.TileEntityReactorController;
+import main.nuclearcubes.tile.machines.TileEntityFuelReprocessor;
+import main.nuclearcubes.tile.reactor.TileEntityReactorController;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;

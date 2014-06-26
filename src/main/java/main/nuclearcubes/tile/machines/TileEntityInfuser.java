@@ -1,17 +1,18 @@
-package main.nuclearcubes.tileentities;
+package main.nuclearcubes.tile.machines;
 
+import main.nuclearcubes.tile.TileEntityBase;
 import net.minecraft.item.ItemStack;
 
-public class TileEntityFuelReprocessor extends TileEntityBase {
+public class TileEntityInfuser extends TileEntityBase {
 
 	private String field_145958_o;
 
-	public TileEntityFuelReprocessor() {
+	public TileEntityInfuser() {
 	}
 
 	@Override
 	public String getInventoryName() {
-		return null;
+		return "Infuser";
 	}
 
 	@Override
@@ -50,5 +51,4 @@ public class TileEntityFuelReprocessor extends TileEntityBase {
 	public int getScaledProgress(int scale) {
 		return scale;
 	}
-
 }

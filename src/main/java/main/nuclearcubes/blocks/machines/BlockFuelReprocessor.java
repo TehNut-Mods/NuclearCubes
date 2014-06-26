@@ -4,7 +4,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import main.nuclearcubes.ModInformation;
 import main.nuclearcubes.NuclearCubes;
-import main.nuclearcubes.tileentities.TileEntityFuelReprocessor;
+import main.nuclearcubes.tile.machines.TileEntityFuelReprocessor;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -56,8 +56,8 @@ public class BlockFuelReprocessor extends BlockContainer {
 
 		TileEntityFuelReprocessor tile = (TileEntityFuelReprocessor) world.getTileEntity(x, y, z);
 
-		if (!world.isRemote && tile instanceof TileEntityFuelReprocessor) {
-			player.openGui(NuclearCubes.instance, 1, world, x, y, z);
+		if (!world.isRemote && tile != null) {
+			player.openGui(NuclearCubes.instance, 2, world, x, y, z);
 		}
 		return true;
 	}

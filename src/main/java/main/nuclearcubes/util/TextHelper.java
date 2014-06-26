@@ -1,5 +1,7 @@
 package main.nuclearcubes.util;
 
+import net.minecraft.util.StatCollector;
+
 public class TextHelper {
 
 	/** Color Coding **/
@@ -27,4 +29,17 @@ public class TextHelper {
 	public static final String UNDERLINE = (char) 167 + "n";
 	public static final String ITALIC = (char) 167 + "o";
 	public static final String END = (char) 167 + "r";
+
+	/** Enable Localizationizing **/
+	public static String localize(String key) {
+		return StatCollector.translateToLocal(key);
+	}
+
+	private static String[] splitList(String list, String splitRegex) {
+		return list.split(splitRegex);
+	}
+
+	public static String[] splitList(String list) {
+		return splitList(list, "\\|");
+	}
 }

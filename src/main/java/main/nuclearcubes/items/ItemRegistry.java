@@ -13,6 +13,7 @@ import main.nuclearcubes.items.materials.ItemFilter;
 import main.nuclearcubes.items.materials.ItemIngots;
 import main.nuclearcubes.items.tools.buckets.*;
 import main.nuclearcubes.util.BucketHandler;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -45,6 +46,7 @@ public class ItemRegistry {
 
 	//other tools
 	public static Item filter;
+	public static Item graphiteBucket;
 
 	//debug
 	public static Item debugBooks;
@@ -82,6 +84,8 @@ public class ItemRegistry {
 		GameRegistry.registerItem(bucketCorium, bucketCorium.getUnlocalizedName());
 
 		//other tools
+		graphiteBucket = new ItemBucketGraphite(Blocks.air);
+		GameRegistry.registerItem(graphiteBucket, "ItemBucketGraphite");
 		filter = new ItemFilter();
 		GameRegistry.registerItem(filter, "ItemFilter");
 
@@ -104,7 +108,7 @@ public class ItemRegistry {
 			FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("steam", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketSteam), new ItemStack(Items.bucket));
 		}
 		BucketHandler.INSTANCE.buckets.put(BlockRegistry.coriumBlock, bucketCorium);
-		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("corium", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketCorium), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("corium", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(bucketCorium), new ItemStack(graphiteBucket));
 	}
 
 	public static void registerFullItems() {

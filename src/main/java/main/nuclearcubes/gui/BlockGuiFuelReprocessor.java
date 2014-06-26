@@ -1,8 +1,8 @@
 package main.nuclearcubes.gui;
 
 import main.nuclearcubes.ModInformation;
-import main.nuclearcubes.containers.ContainerFuelReprocessor;
-import main.nuclearcubes.tileentities.TileEntityFuelReprocessor;
+import main.nuclearcubes.containers.machines.ContainerFuelReprocessor;
+import main.nuclearcubes.tile.machines.TileEntityFuelReprocessor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;

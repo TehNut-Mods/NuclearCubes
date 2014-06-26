@@ -17,7 +17,7 @@ import main.nuclearcubes.gui.GuiHandler;
 import main.nuclearcubes.items.ItemRecipeRegistry;
 import main.nuclearcubes.items.ItemRegistry;
 import main.nuclearcubes.proxies.CommonProxy;
-import main.nuclearcubes.tileentities.TERegistry;
+import main.nuclearcubes.tile.TERegistry;
 import main.nuclearcubes.util.BucketHandler;
 import main.nuclearcubes.util.CapeEventHandler;
 import main.nuclearcubes.util.GenerationHandler;

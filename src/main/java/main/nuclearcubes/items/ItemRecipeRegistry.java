@@ -23,6 +23,7 @@ public class ItemRecipeRegistry {
 			GameRegistry.addRecipe(new ItemStack(ItemRegistry.ingots, 1, 3), "GCG", 'G', new ItemStack(Blocks.gravel), 'C', new ItemStack(Items.coal, 1, 1));
 		}
 
+		//armor
 		GameRegistry.addRecipe(new ItemStack(ItemRegistry.armorHazmatHelm, 1), "WAW", "WFW", 'W', new ItemStack(Blocks.wool), 'A', new ItemStack(Items.leather_helmet, 1), 'F', new ItemStack(ItemRegistry.filter, 1));
 		GameRegistry.addRecipe(new ItemStack(ItemRegistry.armorHazmatChest, 1), "WAW", "WFW", 'W', new ItemStack(Blocks.wool), 'A', new ItemStack(Items.leather_chestplate, 1), 'F', new ItemStack(ItemRegistry.filter, 1));
 		GameRegistry.addRecipe(new ItemStack(ItemRegistry.armorHazmatLeggings, 1), "WAW", "WFW", 'W', new ItemStack(Blocks.wool), 'A', new ItemStack(Items.leather_leggings, 1), 'F', new ItemStack(ItemRegistry.filter, 1));
@@ -31,6 +32,10 @@ public class ItemRecipeRegistry {
 		} else {
 			GameRegistry.addRecipe(new ItemStack(ItemRegistry.armorHazmatBoots, 1), "WAW", "WFW", 'W', new ItemStack(Blocks.wool), 'A', new ItemStack(Items.leather_boots, 1), 'F', new ItemStack(ItemRegistry.filter, 1));
 		}
+
+		//plated bucket
+		GameRegistry.addRecipe(new ItemStack(ItemRegistry.graphiteBucket, 1), "I I", "GIG", " G ", 'I', new ItemStack(Items.iron_ingot), 'G', new ItemStack(ItemRegistry.ingots, 1, 3));
+		GameRegistry.addRecipe(new ItemStack(ItemRegistry.graphiteBucket, 1), "GBG", " G ", 'B', new ItemStack(Items.bucket), 'G', new ItemStack(ItemRegistry.ingots, 1, 3));
 	}
 
 	private static void registerFurnaceRecipes() {

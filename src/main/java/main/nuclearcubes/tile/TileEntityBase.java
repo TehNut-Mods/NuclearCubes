@@ -1,4 +1,4 @@
-package main.nuclearcubes.tileentities;
+package main.nuclearcubes.tile;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;

@@ -1,6 +1,6 @@
-package main.nuclearcubes.containers;
+package main.nuclearcubes.containers.machines;
 
-import main.nuclearcubes.tileentities.TileEntityFuelReprocessor;
+import main.nuclearcubes.tile.machines.TileEntityFuelReprocessor;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -42,5 +42,4 @@ public class ContainerFuelReprocessor extends Container {
 			addSlotToContainer(new Slot(inv, i, 8 + i * 18, 142));
 		}
 	}
-
 }

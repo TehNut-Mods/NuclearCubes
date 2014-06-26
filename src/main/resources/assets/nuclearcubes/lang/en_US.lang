@@ -73,10 +73,11 @@ item.nuclearcubes.bucket.yellorium.name=Uranium Bucket
 item.nuclearcubes.bucket.cyanite.name=Depleted Uranium Bucket
 item.nuclearcubes.bucket.blutonium.name=Plutonium Bucket
 item.nuclearcubes.bucket.steam.name=Steam Bucket
-item.nuclearcubes.bucket.corium.name=Corium Bucket
+item.nuclearcubes.bucket.corium.name=Plated Corium Bucket
 
 //OTHER TOOLS
 item.nuclearcubes.material.filter.name=Filter
+item.nuclearcubes.bucket.graphite.empty.name=Plated Bucket
 
 //DEBUG
 item.nuclearcubes.debug.redBook.name=Red Debug Book
