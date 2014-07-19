@@ -1,6 +1,6 @@
 #Cubes of Nuclear Proportion
 
-__Also comes in other prismic shapes__
+__Also comes in other cuboid-ic shapes__
 
 I wasn't happy with the direction that BigReactors was going in, nor was I happy with the balancing. This was born from it. It is a fresh codebase, so nothing is copied. 
 
