@@ -13,7 +13,10 @@ buildscript {
 apply plugin: 'forge'
 apply plugin: 'maven-publish'
 
-def build_number = System.getenv('BUILD_NUMBER') != null ?: 'CUSTOM'
+def build_number = 'UNKNOWN'
+
+if (System.getenv('BUILD_NUMBER') != null)
+    build_number = System.getenv('BUILD_NUMBER')
 
 group = package_group
 archivesBaseName = 'mod_name'
