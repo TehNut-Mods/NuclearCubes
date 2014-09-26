@@ -1,5 +1,0 @@
-speedynutty68:https://raw.githubusercontent.com/TehNut/NuclearCubes/master/capes/cape.png
-ganzu:https://raw.githubusercontent.com/TehNut/NuclearCubes/master/capes/cape.png
-tombenpotter:https://raw.githubusercontent.com/TehNut/NuclearCubes/master/capes/cape.png
-professor29:https://raw.githubusercontent.com/TehNut/NuclearCubes/master/capes/cape.png
-TestUser:http://tehnut.info/images/cape.png
