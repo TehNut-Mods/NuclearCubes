@@ -1,6 +1,6 @@
 package main.nuclearcubes.client.gui;
 
-import erogenousbeef.bigreactors.common.BigReactors;
+import main.nuclearcubes.items.ItemRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -13,7 +13,7 @@ public class CreativeTabNuclearCubes extends CreativeTabs {
 
 	@Override
 	public ItemStack getIconItemStack() {
-		return new ItemStack(BigReactors.blockReactorPart);
+		return new ItemStack(ItemRegistry.armorHazmatHelm);
 	}
 
 	@Override

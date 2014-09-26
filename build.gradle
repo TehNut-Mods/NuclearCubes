@@ -19,7 +19,7 @@ if (System.getenv('BUILD_NUMBER') != null)
     build_number = System.getenv('BUILD_NUMBER')
 
 group = package_group
-archivesBaseName = 'mod_name'
+archivesBaseName = mod_name
 version = "${mc_version}-${mod_version}-${build_number}"
 
 import org.ajoberstar.grgit.Grgit
