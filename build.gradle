@@ -1,98 +1,116 @@
 buildscript {
     repositories {
         mavenCentral()
-        maven {
-            name = "forge"
-            url = "http://files.minecraftforge.net/maven"
-        }
-        maven {
-            name = "sonatype"
-            url = "https://oss.sonatype.org/content/repositories/snapshots/"
-        }
+        maven { url = "http://files.minecraftforge.net/maven" }
+        maven { url = "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        classpath 'org.ajoberstar:gradle-git:0.10.1'
     }
 }
 
 apply plugin: 'forge'
+apply plugin: 'maven-publish'
 
-ext.configFile = file "build.properties"
-configFile.withReader {
-    // read config.  it shall from now on be referenced as simply config or as project.config
-    def prop = new Properties()
-    prop.load(it)
-    project.ext.config = new ConfigSlurper().parse prop
+def build_number = System.getenv('BUILD_NUMBER') != null ?: 'CUSTOM'
+
+group = package_group
+archivesBaseName = 'mod_name'
+version = "${mc_version}-${mod_version}-${build_number}"
+
+import org.ajoberstar.grgit.Grgit
+
+def gitHash = 'unknown'
+if (new File(projectDir, '.git').exists()) {
+    def repo = Grgit.open(project.file('.'))
+    gitHash = repo.log().find().abbreviatedId
 }
 
-if (System.getenv('BUILD_NUMBER') != null) {
-    build_number = System.getenv('BUILD_NUMBER')
-} else {
-    build_number = "CUSTOM"
-}
-
-version = config.mc_version + "-" + config.mod_version + "-" + build_number
-group = config.package_group // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = config.mod_name
-
-minecraft {
-    version = "1.7.10-10.13.1.1217"
-    assetDir = "run/assets"
-    runDir = "run/"
+repositories {
+    maven { url 'http://maven.tterrag.com/' }
+    maven { url 'http://mobiusstrip.eu/maven' } // ttCore requires waila
+    maven { url 'http://chickenbones.net/maven' } // And CodeChickenCore
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
+    compile "tterrag.core:ttCore:${ttCore_version}"
 }
 
-processResources
-        {
-            // this will ensure that this task is redone when the versions change.
-            inputs.property "version", project.version
-            inputs.property "mcversion", project.minecraft.version
+minecraft {
+    version = "${mc_version}-${forge_version}"
+    runDir = "run"
 
-            // replace stuff in mcmod.info, nothing else
-            from(sourceSets.main.resources.srcDirs) {
-                include 'mcmod.info'
+    if (project.hasProperty('mappings_version'))
+        mappings = project.mappings_version
+}
 
-                // replace version and mcversion
-                expand 'version': project.version, 'mcversion': project.minecraft.version
-            }
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
 
-            // copy everything else, thats not the mcmod.info
-            from(sourceSets.main.resources.srcDirs) {
-                exclude 'mcmod.info'
-            }
-        }
+    from(sourceSets.main.resources.srcDirs) {
+        include '**/*.info'
+        include '**/*.properties'
 
-// change the name of the obfuscated jar
+        expand 'version': project.version, 'mcversion': project.minecraft.version
+    }
+    from(sourceSets.main.resources.srcDirs) {
+        exclude '**/*.info'
+        exclude '**/*.properties'
+    }
+}
+
 jar {
     appendix = 'universal'
-
+    manifest.mainAttributes(
+            "Built-By": System.getProperty('user.name'),
+            "Created-By": "${System.getProperty('java.vm.version')} + (${System.getProperty('java.vm.vendor')})",
+            "Implementation-Title": project.name,
+            "Implementation-Version": project.version,
+            "Git-Hash": gitHash
+    )
 }
 
 // add a source jar
 task sourceJar(type: Jar) {
     from sourceSets.main.allSource
-    appendix = 'sources'
+    classifier = 'sources'
 }
 
 // add a javadoc jar
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    appendix = 'javadoc'
-    from 'build/docs/javadoc'
+    from javadoc.destinationDir
+    classifier = 'javadoc'
 }
 
 // because the normal output has been made to be obfuscated
 task deobfJar(type: Jar) {
     from sourceSets.main.output
-    appendix = 'deobf'
+    classifier = 'deobf'
 }
 
-artifacts {
-    archives sourceJar
-    archives deobfJar
-    archives javadocJar
+tasks.build.dependsOn sourceJar, javadocJar, deobfJar
 
-    //archives obfJar
+tasks.withType(JavaCompile) { task ->
+    task.options.encoding = 'UTF-8'
+}
+
+publishing {
+    tasks.publish.dependsOn 'build'
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourceJar
+            artifact javadocJar
+            artifact deobfJar
+        }
+    }
+    repositories {
+        if (project.hasProperty('maven_repo')) {
+            maven { url maven_repo }
+        } else {
+            mavenLocal()
+        }
+    }
 }
