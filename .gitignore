@@ -21,3 +21,8 @@
 #Specific files
 MCFPost.txt
 Thumbs.db
+
+#IntelliJ
+.idea
+out
+*.iml
