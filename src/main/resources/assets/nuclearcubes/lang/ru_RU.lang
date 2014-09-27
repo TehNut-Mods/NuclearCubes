@@ -1,0 +1,22 @@
+#CREATIVE TAB
+itemGroup.nuclearcubes.creativeTab=Nuclear Cubes
+
+#CONFIG GUI
+info.nuclearcubes.config.title=Конфигурация Nuclear Cubes
+
+#BLOCKS
+
+#ITEMS
+item.nuclearcubes.material.filter.name=Защитный фильтр
+
+item.nuclearcubes.armor.hazmat.helm.name=Защитная маска
+item.nuclearcubes.armor.hazmat.chestplate.name=Защитная кираса
+item.nuclearcubes.armor.hazmat.leggings.name=Защитные поножи
+item.nuclearcubes.armor.hazmat.boots.name=Защитные ботинки
+
+#TOOLTIPS
+
+#CHAT
+
+#CONSOLE LOG
+info.nuclearcubes.console.config.refresh=Обновление файла конфигурации.
