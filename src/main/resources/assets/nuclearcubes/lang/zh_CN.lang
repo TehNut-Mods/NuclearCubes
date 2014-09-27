@@ -1,0 +1,22 @@
+#CREATIVE TAB
+itemGroup.nuclearcubes.creativeTab=核立方
+
+#CONFIG GUI
+info.nuclearcubes.config.title=核立方配置
+
+#BLOCKS
+
+#ITEMS
+item.nuclearcubes.material.filter.name=辐射防护滤管
+
+item.nuclearcubes.armor.hazmat.helm.name=放射防护面具
+item.nuclearcubes.armor.hazmat.chestplate.name=放射防护衣
+item.nuclearcubes.armor.hazmat.leggings.name=放射防护裤
+item.nuclearcubes.armor.hazmat.boots.name=放射防护靴
+
+#TOOLTIPS
+
+#CHAT
+
+#CONSOLE LOG
+info.nuclearcubes.console.config.refresh=刷新配置文件.
