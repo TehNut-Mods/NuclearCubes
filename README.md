@@ -1,7 +1,6 @@
-#Nuclear Cubes Redstone Armory [![Build Status](http://tehnut.info/jenkins/job/NuclearCubes/badge/icon)](http://tehnut.info/jenkins/job/NuclearCubes/)
-==============
+#Nuclear Cubes [![Build Status](http://tehnut.info/jenkins/job/NuclearCubes/badge/icon)](http://tehnut.info/jenkins/job/NuclearCubes/)
 
-Enhancing the Redstone (Flux) revolution!
+The future GregTech of Big Reactors.
 
 
 ##Branch Information
