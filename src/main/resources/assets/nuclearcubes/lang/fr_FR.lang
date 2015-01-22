@@ -1,0 +1,21 @@
+#CREATIVE TAB
+itemGroup.nuclearcubes.creativeTab=Nuclear Cubes
+
+#CONFIG GUI
+info.nuclearcubes.config.title=Configuration des Cubes Nucléaires
+
+#BLOCKS
+
+#ITEMS
+item.nuclearcubes.material.filter.name=Filtre Hazmat
+item.nuclearcubes.armor.hazmat.helm.name=Masque Hazmat
+item.nuclearcubes.armor.hazmat.chestplate.name=Plastron Hazmat
+item.nuclearcubes.armor.hazmat.leggings.name=Jambières Hazmat
+item.nuclearcubes.armor.hazmat.boots.name=Bottes Hazmat
+
+#TOOLTIPS
+
+#CHAT
+
+#CONSOLE LOG
+info.nuclearcubes.console.config.refresh=Rafraîchissement du fichier de configuration.
