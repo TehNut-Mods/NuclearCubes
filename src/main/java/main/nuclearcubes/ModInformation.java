@@ -9,5 +9,5 @@ public class ModInformation {
 	public static final String CLIENTPROXY = "main.nuclearcubes.proxies.ClientProxy";
 	public static final String COMMONPROXY = "main.nuclearcubes.proxies.CommonProxy";
 	public static final String GUIFACTORY = "main.nuclearcubes.client.gui.ConfigGuiFactory";
-	public static final String REQUIRED = "required-after:ttCore;" + "required-after:BigReactors" + "required-after:CoFHCore";
+	public static final String REQUIRED = "required-after:ttCore;" + "required-after:BigReactors;" + "required-after:CoFHCore;";
 }
