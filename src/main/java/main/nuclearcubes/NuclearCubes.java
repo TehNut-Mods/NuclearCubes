@@ -22,7 +22,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = ModInformation.ID, name = ModInformation.NAME, version = ModInformation.VERSION, /*dependencies = ModInformation.REQUIRED,*/ guiFactory = ModInformation.GUIFACTORY)
+@Mod(modid = ModInformation.ID, name = ModInformation.NAME, version = ModInformation.VERSION, dependencies = ModInformation.REQUIRED, guiFactory = ModInformation.GUIFACTORY)
 public class NuclearCubes {
 
 	@SidedProxy(clientSide = ModInformation.CLIENTPROXY, serverSide = ModInformation.COMMONPROXY)
